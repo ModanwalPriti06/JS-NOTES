@@ -99,3 +99,34 @@ console.log(result);
 - Generators do not execute its body immediately when they are invoked.
 - Generators can pause midway and resumes their executions where they were paused. The yield statement pauses the execution of a generator and returns a value.
 - Generators are iterable so you can use them with the for...of loop.
+
+## Array extensions
+- Array.of() – improve array creation.
+- Array.from() – create arrays from array-like or iterable objects.
+- Array find() – find an element in an array
+- Array findIndex() – find the index of an element in an array.
+
+when you pass a number to the Array constructor, JavaScript creates an array whose length equals the number. For example:
+```
+let numbers = new Array(2);
+console.log(numbers.length); // 2
+console.log(numbers[0]); // undefined
+```
+owever, when you pass to the Array constructor a value that is not a number, JavaScript creates an array that contains one element with that value. For example:
+```
+numbers = new Array("2");
+console.log(numbers.length); // 1
+console.log(numbers[0]); // "2"
+```
+### Array.of()
+  the Array.of() method always creates an array that contains the values that you pass to it regardless of the types or the number of arguments.
+  ```
+  let numbers = Array.of(3);
+  console.log(numbers.length); // 1
+  console.log(numbers[0]); // 3
+  ```
+  ```
+  let chars = Array.of('A', 'B', 'C');
+  console.log(chars.length); // 3
+  console.log(chars); // ['A','B','C']
+  ```
