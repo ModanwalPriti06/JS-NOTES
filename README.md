@@ -28,3 +28,44 @@ console.log(rank.c); // 3
 ```
 ### When You Should Not Use Arrow Functions
 An arrow function doesn’t have its own this value and the arguments object. Therefore, you should not use it as an event handler, a method of an object literal, a prototype method, or when you have a function that uses the arguments object.
+
+### for.. of VS for.. in Loop
+```
+// Array Iteration
+
+const arr = [4,5,6,7,8];
+
+for(let i of arr){
+  console.log("of loop",i)
+}
+for(let i in arr){
+  console.log("in loop",arr[i])
+}
+
+// Object Iteration
+
+const person = {
+  name: 'john doe',
+  age: 24,
+  Id: 101123
+}
+
+for (let [key,value] of Object.entries(person)) {
+  console.log(`${key}: ${value}`);
+}
+
+for (let key of Object.keys(person)) {
+  console.log(`${key}: ${person[key]}`);
+}
+
+for (let [key,value] of Object.values(person)) {
+  console.log(`Value is: ${value}`);
+} 
+
+
+for (let res in person){
+    console.log("key is: ",res);
+    console.log("value is: ",person[res]);
+    console.log(`${res}: ${person[res]}`)
+}
+```
