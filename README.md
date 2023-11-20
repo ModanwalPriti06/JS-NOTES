@@ -69,3 +69,17 @@ for (let res in person){
     console.log(`${res}: ${person[res]}`)
 }
 ```
+## JavaScript Generators
+In JavaScript, a regular function is executed based on the run-to-completion model. It cannot pause midway and then continues from where it paused.
+A generator can pause midway and then continues from where it paused. For example:
+
+```
+function* generate() {
+    console.log('invoked 1st time');
+    yield 1;
+    console.log('invoked 2nd time');
+    yield 2;
+}
+```
+- First, you see the asterisk (*) after the function keyword. The asterisk denotes that the generate() is a generator, not a normal function.
+- Second, the yield statement returns a value and pauses the execution of the function.
