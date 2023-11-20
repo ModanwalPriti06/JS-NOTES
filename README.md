@@ -130,3 +130,17 @@ console.log(numbers[0]); // "2"
   console.log(chars.length); // 3
   console.log(chars); // ['A','B','C']
   ```
+### Array.from()
+Array.from() method that creates a new instance of the Array from an array-like or iterable object. The following illustrates the syntax of the Array.from() method:
+```Array.from(target [, mapFn[, thisArg]])```
+- target is an array-like or iterable object to convert to an array.
+- mapFn is the map function to call on every element of the array
+- thisArg is the this value when executing the mapFn function.
+  
+The Array.from() returns a new instance of Array that contains all elements of the target object.
+```
+function arrayFromArgs() {
+    return Array.from(arguments);
+}
+console.log(arrayFromArgs(1, 'A'));
+```
