@@ -80,6 +80,22 @@ function* generate() {
     console.log('invoked 2nd time');
     yield 2;
 }
+let gen = generate();
+console.log(gen);
+
+o/p:  Object [Generator] {}
 ```
 - First, you see the asterisk (*) after the function keyword. The asterisk denotes that the generate() is a generator, not a normal function.
 - Second, the yield statement returns a value and pauses the execution of the function.
+
+So, a generator returns a Generator object without executing its body when it is invoked.
+The Generator object returns another object with two properties: done and value. In other words, a Generator object is iterable.
+The following calls the next() method on the Generator object:
+```
+let result = gen.next();
+console.log(result);
+```
+- Generators are created by the generator function function* f(){}.
+- Generators do not execute its body immediately when they are invoked.
+- Generators can pause midway and resumes their executions where they were paused. The yield statement pauses the execution of a generator and returns a value.
+- Generators are iterable so you can use them with the for...of loop.
