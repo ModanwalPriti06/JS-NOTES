@@ -208,9 +208,19 @@ console.log(p2); // Output: { isMinor: true }
 In JavaScript, "shadowing" refers to the situation where a variable declared in a local scope has the same name as a variable in an outer scope. This.
 
 ## JavaScript Prototypal Inheritance
+JavaScript doesn’t use classical inheritance. Instead, it uses prototypal inheritance.In prototypal inheritance, an object “inherits” properties from another object via the prototype linkage.
 
-
-
+```
+let person = {
+    name: "John Doe",
+    greet: function () {
+        return "Hi, I'm " + this.name;
+    }
+};
+let teacher = {}
+teacher.__proto__ = person;
+console.log(teacher.greet());
+```
 
 
 
