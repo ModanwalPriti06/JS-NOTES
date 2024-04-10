@@ -209,6 +209,7 @@ In JavaScript, "shadowing" refers to the situation where a variable declared in 
 
 ## JavaScript Prototypal Inheritance
 JavaScript doesn’t use classical inheritance. Instead, it uses prototypal inheritance.In prototypal inheritance, an object “inherits” properties from another object via the prototype linkage.
+- Inheritance allows an object to use the properties and methods of another object without duplicating the code.
 
 ```
 let person = {
