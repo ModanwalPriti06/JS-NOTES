@@ -154,25 +154,6 @@ console.log(arrayFromArgs(1, 'A'));
 - A constructor function should be called only with the new operator.
 - If return is called with an object, the constructor function returns that object instead of this.
 - If return is called with a value other than an object, it is ignored.
-  ```
-  function Person(name, age) {
-    this.name = name;
-    this.age = age;
-    
-    // If return is called with an object, it returns that object
-    if (age < 18) {
-        return { isMinor: true }; // Returning an object
-    }
-
-    // If return is called with a value other than an object, it is ignored
-    return age; // This return statement is ignored
-}
-
-const p1 = new Person('John', 25);
-console.log(p1); // Output: Person { name: 'John', age: 25 }
-
-const p2 = new Person('Alice', 16);
-console.log(p2); // Output: { isMinor: true }
       
  ```
 function Person(name, age) {
