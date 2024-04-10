@@ -146,6 +146,14 @@ function arrayFromArgs() {
 }
 console.log(arrayFromArgs(1, 'A'));
 ```
+# JAVASCRIPT FUNCTION
+## JavaScript Functions are First-Class Citizens
+- Storing functions in variables is first class citizen. In other words, you can treat functions like values of other types.
+  ``` function add(a, b) {
+    return a + b;
+}
+
+let sum = add; ```
 
 # JAVASCRIPT OBJECTS
 ## Object Method:
