@@ -2,7 +2,7 @@
 Basic Javascript notes for beginners
 
 
-# Pipe aand debouncng and generator
+# Pipe and debouncng and generator
 
 ## How to Start
 1. Create new repo and add README file.
@@ -306,6 +306,13 @@ getBrand.apply(honda, ["It's a "]); // "It's a Honda"
 getBrand.apply(audi, ["It's an "]); // "It's a Audi"
 ```
 ## Arrow Function
+In arrow functions, JavaScript sets the this lexically.It means the arrow function does not create its own execution context but inherits the this from the outer function where the arrow function is defined. See the following example:
+- Lexical scope: access variables and declarations inside function but not access any variable and declaration code outside which is define inside function.
+
+## Global This
+- In web browsers, the global object is window or frames.
+- In Node.js, the global object is global.
+
 
 
 
