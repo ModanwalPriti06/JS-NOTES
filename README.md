@@ -152,6 +152,7 @@ console.log(arrayFromArgs(1, 'A'));
 - JavaScript constructor function is a regular function used to create multiple similar objects.
 - The name of a constructor function starts with a capital letter like Person.
 - A constructor function should be called only with the new operator.
+- you can call a constructor function like a regular function without using the new keyword.
 - If return is called with an object, the constructor function returns that object instead of this.
 - If return is called with a value other than an object, it is ignored.
       
@@ -176,6 +177,17 @@ const p2 = new Person('Alice', 16);
 console.log(p2); // Output: { isMinor: true }
 
 ```
+## JavaScript Prototype
+- In JavaScript, objects can inherit features from one another via prototypes. Every object has its own property called a prototype.
+- This creates a something called prototype chain.
+- However, if you access a property that doesn’t exist in an object, the JavaScript engine will search in the prototype of the object.
+
+### JavaScript prototype illustration
+- JavaScript has the built-in Object() function. The typeof operator returns 'function' if you pass the Object function to it.
+  ``` typeof(Object) //output: 'function' ```
+<span style="color:red"> Please note that Object() is a function, not an object. <span>
+   
+
 
 
 
