@@ -314,6 +314,30 @@ In arrow functions, JavaScript sets the this lexically.It means the arrow functi
 - In Node.js, the global object is global.
 - Use the globalThis object to reference the global object to make the code work across environments.
 
+## JavaScript Object Properties
+- JavaScript objects have two types of properties: data properties and accessor properties.
+- JavaScript uses internal attributes denoted [[...]] to describe the characteristics of properties such as [[Configurable]], [[Enumerable]], [[Writable]], and  [[Value]], [[Get]], and [[Set]].
+- The method Object.getOwnPropertyDescriptor() return a property descriptor of a property in an object.
+
+## for__in loop
+Enumerability: refers to whether a property of an object will be iterated over by certain operations.
+- The for...in loop over the enumerable properties that are keyed by strings of an object. Note that a property can be keyed by a string or a symbol.
+- The for...in  allows you to access each property and value of an object without knowing the specific name of the property. For example:
+```
+var person = {
+    firstName: 'John',
+    lastName: 'Doe',
+    ssn: '299-24-2351'
+};
+
+for(var prop in person) {
+    console.log(prop + ':' + person[prop]);
+}
+
+```
+We accessed the value of each property using the following syntax:
+__ Syntax: object[property];__
+
 
 
 
