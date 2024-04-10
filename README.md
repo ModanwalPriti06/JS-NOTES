@@ -282,6 +282,10 @@ let brand = car.getBrand.bind(car);
 console.log(brand()); // Honda
 
 ```
+### 3) Constructor invocation
+### 4) Indirect Invocation
+
+
 
 
 
