@@ -312,6 +312,8 @@ In arrow functions, JavaScript sets the this lexically.It means the arrow functi
 ## Global This
 - In web browsers, the global object is window or frames.
 - In Node.js, the global object is global.
+- Use the globalThis object to reference the global object to make the code work across environments.
+
 
 
 
