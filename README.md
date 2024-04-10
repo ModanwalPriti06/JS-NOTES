@@ -2,6 +2,8 @@
 Basic Javascript notes for beginners
 
 
+# Pipe aand debouncng and generator
+
 ## How to Start
 1. Create new repo and add README file.
 2. click on code button code > codespace > click
@@ -179,7 +181,8 @@ console.log(p2); // Output: { isMinor: true }
 ```
 ## JavaScript Prototype
 - In JavaScript, objects can inherit features from one another via prototypes. Every object has its own property called a prototype.
-- This creates a something called prototype chain.
+- The Object() function has a property called prototype that references a Object.prototype object.
+- The Object.prototype object has all properties and methods which are available in all objects such as toString() and valueOf()
 - However, if you access a property that doesn’t exist in an object, the JavaScript engine will search in the prototype of the object.
 
 ### JavaScript prototype illustration
@@ -187,6 +190,12 @@ console.log(p2); // Output: { isMinor: true }
   ``` typeof(Object) //output: 'function' ```
 <span style="color:red"> Please note that Object() is a function, not an object. <span>
    
+### Getting prototype linkage
+- The __proto__ is pronounced as dunder proto. The __proto__ is an accessor property of the Object.prototype object.
+- Every function has a prototype object. This prototype object references the Object.prototype object via [[prototype]] linkage or __proto__ property.
+
+### Shadowing
+In JavaScript, "shadowing" refers to the situation where a variable declared in a local scope has the same name as a variable in an outer scope. This.
 
 
 
