@@ -222,6 +222,66 @@ let teacher = {}
 teacher.__proto__ = person;
 console.log(teacher.greet());
 ```
+## this keyword
+In JavaScript, you can use the this keyword in the global and function contexts. Moreover, the behavior of the  this keyword changes between strict and non-strict modes.
+
+### Global context
+In the global context, the this references the global object, which is the window object on the web browser or global object on Node.js.
+```
+this.color= 'Red';
+console.log(window.color); // 'Red'
+```
+### Function context
+
+- Function invocation
+- Method invocation
+- Constructor invocation
+- Indirect invocation
+
+ #### 1) Simple function invocation
+non-strict mode: 
+```
+function show() {
+   console.log(this === window); // true
+}
+
+show();
+```
+strict mode:
+```
+"use strict";
+
+function show() {
+    console.log(this === undefined); //true
+}
+
+show();
+```
+#### 2) Method invocation
+when you call a method without specifying its object, JavaScript sets this to the global object in non-strict mode and undefined in the strict mode.
+```
+let car = {
+    brand: 'Honda',
+    getBrand: function () {
+        return this.brand;
+    }
+}
+
+console.log(car.getBrand()); // Honda
+
+```
+```
+let brand = car.getBrand;
+```
+```
+console.log(brand()); // undefined
+```
+To fix this issue, you use the bind() method of the Function.prototype object. The bind() method creates a new function whose the this keyword is set to a specified value.
+```
+let brand = car.getBrand.bind(car);
+console.log(brand()); // Honda
+
+```
 
 
 
