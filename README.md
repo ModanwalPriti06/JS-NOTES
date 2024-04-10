@@ -352,6 +352,38 @@ console.log(person.propertyIsEnumerable('lastName')); // => true
 console.log(employee.hasOwnProperty('job')); // => true
 console.log(employee.hasOwnProperty('firstName'));
 ```
+## Factory Function
+A factory function is a function that returns a new object. The following creates a person object named person1:
+suppose same property and method u have to create 50 person object so define separatily we define below like that where createPerson function return new Object.
+```
+function createPerson(firstName, lastName) {
+  return {
+    firstName: firstName,
+    lastName: lastName,
+    getFullName() {
+      return firstName + ' ' + lastName;
+    },
+  };
+}
+
+let person1 = createPerson('John', 'Doe');
+let person2 = createPerson('Jane', 'Doe');
+......for 50 peerson
+
+console.log(person1.getFullName());
+console.log(person2.getFullName());
+```
+### Object.create() method
+- The Object.create() method creates a new object using an existing object as the prototype of the new object.
+- Use Object.create() to create an object using an existing object as a prototype.
+
+```
+Object.create(proto, [propertiesObject])
+```
+
+
+
+
 
 
 
