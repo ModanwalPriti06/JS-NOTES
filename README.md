@@ -335,8 +335,24 @@ for(var prop in person) {
 }
 
 ```
-We accessed the value of each property using the following syntax:
-__ Syntax: object[property];__
+- We accessed the value of each property using the following syntax:
+**object[property];**
+- If you want to enumerate only the own properties of an object, you use the hasOwnProperty() method:
+
+## Enumerable properties
+- Enumerable properties are iterated using the for...in loop or Objects.keys() method.
+- obj.propertyIsEnumerable() determines whether or not a property is enumerable.
+- Example: console.log(person.propertyIsEnumerable('firstName')); // => true
+console.log(person.propertyIsEnumerable('lastName')); // => true
+
+## Own Property
+- A property that is directly defined on an object is an own property.
+- The obj.hasOwnProperty() method determines whether or not a property is own.
+```
+console.log(employee.hasOwnProperty('job')); // => true
+console.log(employee.hasOwnProperty('firstName'));
+```
+
 
 
 
