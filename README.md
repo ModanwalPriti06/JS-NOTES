@@ -207,7 +207,7 @@ console.log(p2); // Output: { isMinor: true }
 ### Shadowing
 In JavaScript, "shadowing" refers to the situation where a variable declared in a local scope has the same name as a variable in an outer scope. This.
 
-
+## JavaScript Prototypal Inheritance
 
 
 
