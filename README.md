@@ -380,6 +380,8 @@ console.log(person2.getFullName());
 ```
 Object.create(proto, [propertiesObject])
 ```
+## Debouncing
+
 
 
 
