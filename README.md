@@ -380,6 +380,43 @@ console.log(person2.getFullName());
 ```
 Object.create(proto, [propertiesObject])
 ```
+## Sorting
+### Bubble Sort
+1. Compare two adjcent element and keep max element in last index until array is not sorted.
+```
+let array = [2,4,1,8,40,35];
+let n = array.length
+for(let i=0; i<n; i++){
+  for(let j=0; j<n-i-1; j++){
+    if (array[j] > array[j+1]){
+      [array[j], array[j+1]] = [array[j+1], array[j]]
+    }
+  }
+  
+}
+console.log(array);
+```
+### Selection Sort
+1. Selection sort is a sorting algorithm that selects the smallest element from an unsorted part in each iteration and places that element at the beginning of the unsorted part.
+```
+let arr = [64, 34, 25, 10, 22, 11, 90]
+let n= arr.length;
+for(let i=0;i<n; i++){
+    let minIndex = i;
+  for(let j= i+1; j<n;j++){
+    if(arr[j]<arr[minIndex]){
+      minIndex = j;
+    }
+  }
+  
+  if(minIndex !== i){
+    [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+  }
+}
+console.log(arr)
+```
+### Insertion Sort
+
 ## Debouncing
 
 
