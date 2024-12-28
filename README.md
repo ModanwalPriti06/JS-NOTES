@@ -416,6 +416,24 @@ for(let i=0;i<n; i++){
 console.log(arr)
 ```
 ### Insertion Sort
+Note: This algorithm works like organizing cards in your hand during a card game.
+
+1. Insertion sort, each element is picked from the unsorted part and placed into its correct position within the sorted portion, gradually sorting the entire array.
+```
+let arr = [64, 34, 25, 10, 22, 11, 90];
+let n= arr.length;
+for(let i=1; i<n; i++){
+  let key = arr[i];
+  let j= i-1;
+  while(j>=0 && arr[j]>key){
+    arr[j+1]=arr[j];
+    j--;
+  }
+  arr[j+1]=key;
+  
+}
+console.log(arr)
+```
 
 ## Debouncing
 
