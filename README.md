@@ -434,6 +434,58 @@ for(let i=1; i<n; i++){
 }
 console.log(arr)
 ```
+### Merge Sort
+In Merge Sort, a recursive function is used to divide an array into multiple subarrays, and a merge function is used to combine those independent subarrays.
+```
+let arr = [12, 11, 13, 10, 20, 6, 5];
+
+// Merge function for merge divided array
+function merge(arr, start, mid, end) {
+    let leftSize = mid - start + 1;
+    let rightSize = end - mid;
+
+    let leftArray = [];
+    let rightArray = [];
+
+    for (let i = 0; i < leftSize; i++) {
+        leftArray[i] = arr[start + i];
+    }
+    for (let i = 0; i < rightSize; i++) {
+        rightArray[i] = arr[mid + 1 + i];
+    }
+
+    let i = 0, j = 0, k = start;
+
+    while (i < leftSize && j < rightSize) {
+        if (leftArray[i] <= rightArray[j]) {
+            arr[k++] = leftArray[i++];
+        } else {
+            arr[k++] = rightArray[j++];
+        }
+    }
+
+    while (i < leftSize) {
+        arr[k++] = leftArray[i++];
+    }
+    while (j < rightSize) {
+        arr[k++] = rightArray[j++];
+    }
+}
+
+// Recursive function for divide an Array
+function mergeSort(arr, start, end) {
+    if (start >= end) {
+        return;
+    }
+    let mid = start + Math.floor((end - start) / 2);
+    mergeSort(arr, start, mid);
+    mergeSort(arr, mid + 1, end);
+    merge(arr, start, mid, end);
+}
+
+mergeSort(arr, 0, arr.length - 1);
+console.log(arr); 
+```
 
 ## Debouncing
 
