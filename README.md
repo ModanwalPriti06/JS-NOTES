@@ -556,7 +556,7 @@ Step 4: Base Case
 12. classList.add('parameter') = add one move value of class
 13. classList.revome('classValue') = remove that class value
 14. classList.toggle('parameter') = if class value exist then remove if not then add          or  classList.toggle('paramert', true/false)
-15. 
+15. style.attributStyleName
 16. 
 
 
