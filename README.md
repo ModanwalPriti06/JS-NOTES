@@ -552,13 +552,19 @@ Step 4: Base Case
 8. getAttribute = return the value of attribute
 9. setAttribute('key','value');
 10. removeAttribute('id);
-11. data-set attribute
+11. data-xyz attribute
+12. classList.add('parameter') = add one move value of class
+13. classList.revome('classValue') = remove that class value
+14. classList.toggle('parameter') = if class value exist then remove if not then add          or  classList.toggle('paramert', true/false)
+15. 
+16. 
+
 
 textContent Vs innertText:
 ```
 index.html
 <div>
-        <span data-set = "This is my test" id='id1'>Hello</span>
+        <span data-test = "This is my test" id='id1' data-longer-name="other dataser value">Hello</span>
         <span style="display: none">Bye</span>
 </div>
 ```
@@ -570,7 +576,9 @@ const span = document.getElementById('id1');
 console.log(div.innerText);   
 console.log(div.textContent);
 
-console.log(span.dataset); // run and see in console
+console.log(span.dataset.test); // run and see in console
+console.log(span.dataset.longer-name); // run and see in console
+
 ```
 Here tetxContent =  hello , Bye. But innerText give output only which is visible on browser -  hello 
 
