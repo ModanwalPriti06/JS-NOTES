@@ -487,6 +487,59 @@ mergeSort(arr, 0, arr.length - 1);
 console.log(arr); 
 ```
 
+### Quick Sort
+
+1. Quick Sort is a highly efficient, comparison-based sorting algorithm that uses the divide-and-conquer approach. It works by selecting a "pivot" element, partitioning the array into two subarrays—elements smaller than the pivot and elements larger than or equal to it—and then recursively sorting these subarrays.
+```
+let arr = [10, 7, 8, 9, 1, 5]
+
+function partion(arr, start, end){
+  const pivot = arr[end];
+  
+  let i = start-1;
+  
+  for(let j=start; j<end; j++){
+    if(arr[j]<= pivot){
+      i++;
+      [arr[i], arr[j]] =  [arr[j], arr[i]]
+      
+    }
+  }
+  // Place pivot in its correct position
+    [arr[i + 1], arr[end]] = [arr[end], arr[i + 1]];
+    return i + 1; 
+}
+
+function quickSort(arr,start,end){
+  if(start< end){
+  let partionIndex = partion(arr,start,end);
+  quickSort(arr,start, partionIndex-1);
+  quickSort(arr,partionIndex+1, end);
+  }
+}
+
+quickSort(arr,0,arr.length-1);
+console.log(arr);
+```
+## Notes: Quick Understand of Quick Sort
+Step 1: Choose a Pivot
+Step 2: Partition the Array
+Step 3: Recursively Apply Quick Sort
+Step 4: Base Case
+
+1. Quick Sort Function
+    Base Case
+    Recursive Case
+       Partition the array:
+       Recursively Sort the Left Partition
+       Recursively Sort the Right Partition
+   
+2.  Partition Function:
+  Choose a Pivot
+  Rearrange the Array
+  Place the Pivot in the Correct Position
+  Return Pivot Index
+
 ## Debouncing
 
 
