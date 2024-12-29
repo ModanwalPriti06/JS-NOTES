@@ -562,7 +562,7 @@ const div  = document.querySelector('div');
 console.log(div.innerText);   
 console.log(div.textContent);
 ```
-Here innerText =  hello , Bye. But tetxContent give output only which is visible on browser -  hello 
+Here tetxContent =  hello , Bye. But innerText give output only which is visible on browser -  hello 
 
 
 
