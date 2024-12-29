@@ -546,21 +546,31 @@ Step 4: Base Case
 2. appendChild
 3. innerText
 4. textContent
+5. innerHTML
+6. remove(parameter)
+7. removeChild(parameter)
+8. getAttribute = return the value of attribute
+9. setAttribute('key','value');
+10. removeAttribute('id);
+11. data-set attribute
 
 textContent Vs innertText:
 ```
 index.html
 <div>
-        <span>Hello</span>
+        <span data-set = "This is my test" id='id1'>Hello</span>
         <span style="display: none">Bye</span>
 </div>
 ```
 ```
 index.js
 const div  = document.querySelector('div');
+const span = document.getElementById('id1');
 
 console.log(div.innerText);   
 console.log(div.textContent);
+
+console.log(span.dataset); // run and see in console
 ```
 Here tetxContent =  hello , Bye. But innerText give output only which is visible on browser -  hello 
 
