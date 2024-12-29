@@ -540,7 +540,31 @@ Step 4: Base Case
   Place the Pivot in the Correct Position
   Return Pivot Index
 
-## Debouncing
+## DOM Manipulation
+
+1. append
+2. appendChild
+3. innerText
+4. textContent
+
+textContent Vs innertText:
+```
+index.html
+<div>
+        <span>Hello</span>
+        <span style="display: none">Bye</span>
+</div>
+```
+```
+index.js
+const div  = document.querySelector('div');
+
+console.log(div.innerText);   
+console.log(div.textContent);
+```
+Here innerText =  hello , Bye. But tetxContent give output only which is visible on browser -  hello 
+
+
 
 
 
