@@ -540,6 +540,8 @@ Step 4: Base Case
   Place the Pivot in the Correct Position
   Return Pivot Index
 
+
+# Advance Topic
 ## DOM Manipulation
 
 1. append
@@ -581,6 +583,14 @@ console.log(span.dataset.longer-name); // run and see in console
 
 ```
 Here tetxContent =  hello , Bye. But innerText give output only which is visible on browser -  hello 
+
+## Destructure
+1. Object Destructure = const {name, age, address} = obj
+2. Array Destructure = const [a,b,c] = arr
+3. object inside obje destructure = const {address : {street, pincode, disct} } = obj
+4. Default Destructure also we can = const {address : {street, pincode, disct, zipeer = 'xyz'} } = obj
+
+
 
 
 
