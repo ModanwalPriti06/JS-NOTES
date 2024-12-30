@@ -646,6 +646,34 @@ const person = {
 console.log(person)   // {firstName: 'priti', lastName: 'modanwal'}
 ```
 
+## Null Coalescing
+The null coalescing operator (??) in JavaScript is used to provide a default value when a variable is either null or undefined. It was introduced in ECMAScript 2020 (ES11) and is often used as a shorthand for ensuring a fallback value.
+
+Note : If you are using this ?? operation take care can only compare between 2 operand (1 ?? 2)
+```
+let value = 0;
+let defaultValue = 10;
+
+console.log(value || defaultValue); // Output: 10 (because 0 is falsy)
+console.log(value ?? defaultValue); // Output: 0 (because 0 is not null or undefined)
+
+```
+## Optional chaining 
+Optional chaining (?.) in JavaScript allows you to safely access deeply nested properties of an object without explicitly checking if each property in the chain exists. It prevents runtime errors when trying to access properties on null or undefined.
+Exam:
+```
+const obj = {
+  name: 'priti',
+  age:22
+}
+
+function per(person){
+  console.log(person?.hobbies?.[0])
+  console.log(person?.sayHi?.())
+}
+per(obj)
+```
+      
 
 
 
