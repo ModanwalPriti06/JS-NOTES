@@ -590,6 +590,61 @@ Here tetxContent =  hello , Bye. But innerText give output only which is visible
 3. object inside obje destructure = const {address : {street, pincode, disct} } = obj
 4. Default Destructure also we can = const {address : {street, pincode, disct, zipeer = 'xyz'} } = obj
 
+## Rest Operater and Spread Operator
+```
+index.js
+
+const divs = document.querySelectorAll("div");
+console.log(divs)   // nodeList
+
+;[...divs].map(div=>{
+  console.log(div);
+})
+```
+or
+```
+const divs = [...document.querySelectorAll("div")];
+console.log(divs)
+
+divs.map(div=>{
+  console.log(div);
+})
+```
+
+## Object Enhancement
+```
+const firstName = 'priti'
+const lastName = 'modanwal'
+
+const person = {
+  firstName,
+  lastName
+}
+
+or
+
+const firstName = 'priti'
+const lastName = 'modanwal'
+const name = 'name'
+
+const person = {
+  firstName,
+  lastName,
+  [name]:firstName + " "+ lastName,    //add key and value in object
+  sayHi(){
+    console.log(hii)
+  }
+}
+
+
+const age = 23
+const index = 1;
+
+const person = {
+  [`age${index}`]: 23,
+}
+console.log(person)   // {firstName: 'priti', lastName: 'modanwal'}
+```
 
 
 
