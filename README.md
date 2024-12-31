@@ -743,7 +743,47 @@ Object.entries(obj).forEach(([key,value])=>
 console.log(Object.getOwnPropertySymbols(obj))
 console.log(obj[name]);
 ```
+#### generator and iterator
+generator: A generator is a function where declare with '*' symbol and inplace of using return keyword in generator using yield. when a generator function call it can call like that( genFunc().next()). Here this is return one object which have 2 property = {value: 1, done: false}. Here in obj key name [value] and value is return what is yield returning and done false means generator not end.
 
+Usecase:
+Just want to do something and wait and doing next thing. If you want to create someting infinite loop
+```
+function* genFunc(){
+  yield 1;
+  yield 2;
+  
+}
+const gen = genFunc();
+console.log(gen.next()) // { value: 1, done: false }
+console.log(gen.next().value)  // 2
+console.log(gen.next().value)  // { value: undefined, done: true }
+```
+###### Fibonacci Series in generator
+
+```
+function* fibonacci(){
+  let prev1 = 0;
+  let prev2 = 1;
+  
+  
+  yield 0;
+  yield 1;
+   while(true){
+     const res = prev1+ prev2;
+     yield res;
+     prev1 = prev2;
+     prev2 = res;
+   }
+  
+}
+const gen = fibonacci();
+console.log(gen.next()) 
+console.log(gen.next()) 
+console.log(gen.next()) 
+... n more
+
+```
 
 
 
