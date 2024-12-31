@@ -673,6 +673,83 @@ function per(person){
 }
 per(obj)
 ```
+## Iterate Over the Object Vs map
+```
+let obj = {
+  1: 'a',
+  2: 'b',
+  3: 'c'
+}
+Object.entries(obj).forEach(([key,val])=>
+{
+  console.log(key,val)
+})
+
+// Map
+const map = new Map([
+  [ 1 , 'a' ] ,
+  [ 2 , 'b' ] ,
+  [ 3 , 'c' ]
+  ]);
+
+map.forEach((key,val)=> {
+  console.log(key,val)
+})
+```
+#### Map 
+In JavaScript, a Map is a built-in data structure that allows you to store key-value pairs where keys can be of any type, including objects, functions, or primitive types.
+
+1. const map = new Map()
+2. size of map = map.size
+3. get value = map.get(key);
+4. map.set(key,value)
+5. check value is exist = map.has(key);  // return true or false
+6. delete key value  = map.delete(key);de
+7. clear map = map.clear();
+
+#### Set
+In JavaScript, a Set is a built-in data structure that allows you to store unique values of any type, including primitive types or object references.
+1. const set = new Set([2,3,5,6,7,2,4,6])
+2. includes() function
+3. add element in set = set.add(2), set.add(90)
+4. iterate over the set: set.has(element)
+5. set.forEach( (val ) => console.log(val)
+6. delete element = set.delete(element);
+7. clear set = set.clear();
+
+```
+function setArray(arr){
+  return [...new Set(arr)];
+}
+console.log(setArray([2,3,2,5,6,4,56,7,6]))
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       
 
 
