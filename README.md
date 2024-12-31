@@ -723,6 +723,26 @@ function setArray(arr){
 }
 console.log(setArray([2,3,2,5,6,4,56,7,6]))
 ```
+#### Symbole
+Symbol is always consider unique value, if value is same but type is simple that is not equal same.
+Symbol is a unique and immutable primitive data type primarily used to create unique property keys or identifiers. Symbols are often useful in scenarios where you need to avoid property name collisions or create hidden properties in objects.
+```
+const name = Symbol('Name');
+const obj = {
+  [name] : 'priti',
+  age: 22
+}
+
+Object.entries(obj).forEach(([key,value])=>
+ { 
+   console.log(key,value)    // here age only will come age and don't come symbol because name is symbol type
+ }
+)
+
+// get symbol type object key value also
+console.log(Object.getOwnPropertySymbols(obj))
+console.log(obj[name]);
+```
 
 
 
