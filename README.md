@@ -521,6 +521,47 @@ function quickSort(arr,start,end){
 quickSort(arr,0,arr.length-1);
 console.log(arr);
 ```
+## Counting Sort
+
+Counting Sort is a simple sorting algorithm that sorts an array by counting the occurrences of each unique element and using those counts to determine their correct positions. It is efficient for datasets with a limited range of values and does not rely on comparisons to sort.
+
+Time Complexity : O(n+k)
+Space Complexity : O(n+k)
+```
+// let max_val = 9;
+let arr = [1, 3, 2, 4, 5, 3, 2, 9]
+let max_val = Math.max(...arr);
+
+// Step 2: Initialize the count array of size max_val + 1, all elements set to 0
+let count = new Array(max_val + 1).fill(0);
+// console.log(count)
+
+// Step 3: Count the occurrences of each element in the arr array
+for (let num of arr) {
+    count[num]++;
+}
+for (let i = 1; i <= max_val; i++) {
+    count[i] += count[i - 1];
+}
+// Create the output array to store the sorted values
+let output = new Array(arr.length);
+
+// Step 5: Build the output array by placing elements at the correct positions
+for (let i = arr.length - 1; i >= 0; i--) {
+    let num = arr[i];
+    output[count[num] - 1] = num;  // Place the element at the correct index in output
+    count[num]--;  // Decrease the count for the current element
+}
+
+// Step 6: Copy the sorted elements from the output array back to the original array
+for (let i = 0; i < arr.length; i++) {
+    arr[i] = output[i];  // Copy the sorted values back to arr
+}
+console.log(arr)
+```
+
+
+
 ## Notes: Quick Understand of Quick Sort
 Step 1: Choose a Pivot
 Step 2: Partition the Array
@@ -760,7 +801,6 @@ console.log(gen.next().value)  // 2
 console.log(gen.next().value)  // { value: undefined, done: true }
 ```
 ###### Fibonacci Series in generator
-
 ```
 function* fibonacci(){
   let prev1 = 0;
@@ -782,8 +822,11 @@ console.log(gen.next())
 console.log(gen.next()) 
 console.log(gen.next()) 
 ... n more
-
 ```
+NOTE: console.log(gen.return()) // generator end (after calling this is you call any generator with next() function it will come generator is end value is undefined
+
+### Object Getter and Setter
+
 
 
 
