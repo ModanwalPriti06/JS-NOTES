@@ -383,6 +383,12 @@ Object.create(proto, [propertiesObject])
 ## Sorting
 ### Bubble Sort
 1. Compare two adjcent element and keep max element in last index until array is not sorted.
+
+Time complexity: 
+   Worst Case : O(n²)
+   Average Case : O(n²)
+   Best Case : O(n)
+Space Complexity: O(1)
 ```
 let array = [2,4,1,8,40,35];
 let n = array.length
@@ -398,6 +404,9 @@ console.log(array);
 ```
 ### Selection Sort
 1. Selection sort is a sorting algorithm that selects the smallest element from an unsorted part in each iteration and places that element at the beginning of the unsorted part.
+   Time complexity: Worst case, Average case, and best case is O(n²).
+   Space complexity: O(1)
+   
 ```
 let arr = [64, 34, 25, 10, 22, 11, 90]
 let n= arr.length;
@@ -419,6 +428,11 @@ console.log(arr)
 Note: This algorithm works like organizing cards in your hand during a card game.
 
 1. Insertion sort, each element is picked from the unsorted part and placed into its correct position within the sorted portion, gradually sorting the entire array.
+Time complexity: 
+   Worst Case : O(n²)
+   Average Case : O(n²)
+   Best Case : O(n)
+Space complexity: O(1)
 ```
 let arr = [64, 34, 25, 10, 22, 11, 90];
 let n= arr.length;
@@ -436,6 +450,8 @@ console.log(arr)
 ```
 ### Merge Sort
 In Merge Sort, a recursive function is used to divide an array into multiple subarrays, and a merge function is used to combine those independent subarrays.
+  Time Complexity: O(n logn)
+  Space Complexity: O(n)
 ```
 let arr = [12, 11, 13, 10, 20, 6, 5];
 
@@ -490,6 +506,11 @@ console.log(arr);
 ### Quick Sort
 
 1. Quick Sort is a highly efficient, comparison-based sorting algorithm that uses the divide-and-conquer approach. It works by selecting a "pivot" element, partitioning the array into two subarrays—elements smaller than the pivot and elements larger than or equal to it—and then recursively sorting these subarrays.
+   Time complexity :
+     Best Case Time Complexity: O(nlog⁡n)
+     Average Case Time Complexity: O(nlog⁡n)
+     Worst Case Time Complexity: O(n²)
+   Space Comolexity :  O(log⁡n)
 ```
 let arr = [10, 7, 8, 9, 1, 5]
 
