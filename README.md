@@ -923,7 +923,23 @@ console.log(sum.call(null,2,3,4,5))
 
 Project - Simplify Quation Project
 
-#### Polyfill
+#### Polyfill:
+In JavaScript, a polyfill is a piece of code (usually JavaScript) that provides modern functionality on older browsers that do not natively support it. Polyfills allow developers to use newer features of JavaScript or the web platform without breaking compatibility with older environments.
+
+##### Why Use Polyfills?
+Web standards evolve over time, introducing new features like Promise, fetch, or Array.prototype.includes. Older browsers may not support these features. A polyfill fills in this gap by adding the missing functionality.
+
+### Transpile & Babel
+Babel : It is javascript compiler
+```
+https://babeljs.io/
+Try it out
+```
+#### Snowpack - The faster frontend build tool
+#### rollup.js
+
+
+
 
 
 
