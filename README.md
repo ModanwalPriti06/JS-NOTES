@@ -848,6 +848,40 @@ NOTE: console.log(gen.return()) // generator end (after calling this is you call
 
 ### Object Getter and Setter
 
+```
+const person={
+  firstName:'kyle',
+  lastName:'doe',
+  get fullName(){
+    return (`${this.firstName} ${this.lastName}`)
+  },
+  set fullName(value){
+    [this.firstName, this.lastName] = value.split(' ');
+  }
+}
+person.fullName = 'priti modanwal'
+console.log(person.fullName)
+```
+Note : If You see in js _propertyname like that key that means it is internal object property. prototype
+```
+const person={
+  age : 24,
+  get birthYear(){
+    const date = new Date()
+    return date.getFullYear() - this.age
+  },
+ 
+}
+
+console.log(person.birthYear)
+```
+### Bind , Call and Apply
+
+
+
+
+
+
 
 
 
