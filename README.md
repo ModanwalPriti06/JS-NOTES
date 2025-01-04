@@ -877,6 +877,54 @@ console.log(person.birthYear)
 ```
 ### Bind , Call and Apply
 
+Bind: In JavaScript, bind() is a method used to create a new function where the value of this is explicitly set to a specific object, and optionally, you can predefine some arguments for that function.
+```
+window.name = 'Global Name';
+const person = {
+  name:'priti'
+}
+function printName(){
+  console.log(this.name);
+}
+
+const res = printName.bind(person);
+console.log(res())
+
+OR
+
+function sum(a,b){
+  return a+b;
+}
+let sumOtherBind = sum.bind(null,4);
+console.log(sumOtherBind(2));
+
+OR
+
+function prod(a,b){
+  return a*b;
+}
+
+const nums = [2,4,5,3,8];
+const res = nums.map(prod.bind(null, 2));
+console.log(res)
+
+```
+Apply: The difference between call and apply in call they have to pass parameter normally and in apply we send parameter in array
+```
+function sum(...nums){
+  return nums.reduce((acc,cur)=> acc+cur, 0)
+  
+}
+const nums = [2,4,3,2,8];
+console.log(sum.apply(null, nums));
+console.log(sum.call(null,2,3,4,5))
+
+```
+
+Project - Simplify Quation Project
+
+#### Polyfill
+
 
 
 
