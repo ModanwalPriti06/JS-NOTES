@@ -938,6 +938,49 @@ Try it out
 #### Snowpack - The faster frontend build tool
 #### rollup.js
 
+## What is functional programming
+Functional programming (FP) in JavaScript is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing state or mutable data. It's centered around pure functions, immutability, and the use of higher-order functions to build more predictable, testable, and modular code.
+
+### Pure function
+###### Characteristics of Pure Functions:
+1. Output depends only on input: The function's behavior is entirely predictable based on its inputs.
+2. No modification of external state: The function does not change variables, data, or state outside its own scope.
+```
+// Pure function: Adds two numbers
+function add(a, b) {
+    return a + b;
+}
+console.log(add(2, 3)); // Always returns 5
+
+OR
+
+const array = [1,2,3,4];
+function pureFunc(arr,ele){
+  return [...arr,ele]
+}
+let array2 = pureFunc(array,5);
+console.log(array);
+console.log(array2)          //This is pure function because array is not modify
+```
+```
+// Impure function: Modifies external state
+let counter = 0;
+function incrementCounter() {
+    counter++; // Modifies external variable
+    return counter;
+}
+console.log(incrementCounter());          // Depends on external state
+
+OR
+
+const array = [1,2,3,4];
+function pureFunc(ele){
+array.push(ele);
+}
+pureFunc(5);
+console.log(array); // this is impure function because actual array got modified
+```
+
 
 
 
