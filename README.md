@@ -980,6 +980,29 @@ array.push(ele);
 pureFunc(5);
 console.log(array); // this is impure function because actual array got modified
 ```
+### Immutable Function
+
+1. Object and array is declare const still they can change the value that thing is mutable but normal define variable as a const is immutable.
+2. So making object immutable we can use Object.freeze(obj).
+3.  The Object.freeze() method in JavaScript is used to make an object immutable. Once an object is frozen:
+No new properties can be added to the object.
+Existing properties cannot be removed or altered (values cannot be changed).
+The prototype of the object cannot be changed.
+```
+const person = {
+    name: "John",
+    age: 30
+};
+Object.freeze(person);
+
+person.age = 35;               // Will not work, silently fails in non-strict mode
+person.city = "New York";     // Adding new properties is not allowed
+
+console.log(person);         // Output: { name: "John", age: 30 }
+```
+
+
+
 
 
 
