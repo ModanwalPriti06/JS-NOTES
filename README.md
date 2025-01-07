@@ -1020,7 +1020,7 @@ A higher-order function is a function in programming that does one or both of th
 1. Takes another function as an argument.
 2. Returns a function as its output.
 
-##### NOTE: Map, filter and Reduce is HOF.
+### NOTE: Map, filter and Reduce is HOF.
 
 #### Function Composition
 
@@ -1042,10 +1042,10 @@ function doubleAndAddOne(ele){
 const res = array.map(doubleAndAddOne)
 console.log(res);
 ```
-### Currying
+## Currying
 Currying is a functional programming technique where a function with multiple arguments is transformed into a sequence of functions, each taking a single argument. Instead of providing all arguments at once, the function can be called incrementally, with each invocation returning a new function that accepts the next argument, until all arguments are provided and the final result is computed.
 
-##### Key Concepts of Currying
+#### Key Concepts of Currying
 1. Partial Application:
   Currying breaks a function with multiple arguments into multiple functions that take one argument at a time.
 2. Flexibility:
@@ -1070,6 +1070,7 @@ or
 const addTwo = sum(2); // Partially apply the first argument
 console.log(addTwo(3)); // Output: 12
 ```
+
 
 
 
