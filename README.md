@@ -1000,6 +1000,53 @@ person.city = "New York";     // Adding new properties is not allowed
 
 console.log(person);         // Output: { name: "John", age: 30 }
 ```
+#### Strict Mode Behavior
+If you're in strict mode, attempting to modify a frozen object will throw a TypeError.
+```
+"use strict";
+
+const person = Object.freeze({
+    name: "John",
+    age: 30
+});
+try {
+    person.age = 35;              // Throws a TypeError in strict mode
+} catch (error) {
+    console.error(error.message); // Output: "Cannot assign to read-only property 'age' of object"
+}
+```
+### High Order Function
+A higher-order function is a function in programming that does one or both of the following:
+1. Takes another function as an argument.
+2. Returns a function as its output.
+
+##### NOTE: Map, filter and Reduce is HOF.
+
+#### Function Composition
+
+Function Composition in JavaScript refers to the process of combining multiple functions into a single function, where the output of one function becomes the input of the next
+```
+const array = [1,2,3,4,5];
+function double(ele){
+  return ele*2;
+}
+
+function addOne(ele){
+  return ele+1;
+}
+
+function doubleAndAddOne(ele){
+  return addOne(double(ele))
+}
+
+const res = array.map(doubleAndAddOne)
+console.log(res);
+```
+
+
+
+
+
 
 
 
