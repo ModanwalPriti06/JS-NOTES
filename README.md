@@ -601,6 +601,54 @@ Step 4: Base Case
   Rearrange the Array
   Place the Pivot in the Correct Position
   Return Pivot Index
+---
+# LinkedList
+
+Linked list store data in node, node is a object that have two things contain value (store data) and pointer( point to next node next-> null).
+
+```
+{ head:
+ {
+  value : 4,
+   next: {
+     value : 4,
+        next: {
+           value : 4,
+                next: {
+                   value : 4,
+                      next: null
+                    }
+              }
+    
+        }
+   }
+}
+
+```
+Operation | LinkedList | Array
+push  | O(1) | O(1)
+pop | O(n) | O(1)
+shift | O(1) | O(n)
+unshift | O(1) | O(n)
+insert | O(n) | O(n) 
+delete | O(n) | O(n) 
+lookup by index | O(n) | O(1)
+lookup by valuw | O(n)  | O(n) 
+
+## Example Define Linkedlist
+```
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Advance Topic
@@ -621,8 +669,6 @@ Step 4: Base Case
 13. classList.revome('classValue') = remove that class value
 14. classList.toggle('parameter') = if class value exist then remove if not then add          or  classList.toggle('paramert', true/false)
 15. style.attributStyleName
-16. 
-
 
 textContent Vs innertText:
 ```
@@ -645,7 +691,7 @@ console.log(span.dataset.longer-name); // run and see in console
 
 ```
 Here tetxContent =  hello , Bye. But innerText give output only which is visible on browser -  hello 
-
+---
 ## Destructure
 1. Object Destructure = const {name, age, address} = obj
 2. Array Destructure = const [a,b,c] = arr
@@ -1070,6 +1116,8 @@ or
 const addTwo = sum(2); // Partially apply the first argument
 console.log(addTwo(3)); // Output: 12
 ```
+
+
 
 
 
