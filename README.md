@@ -694,16 +694,52 @@ console.log(ll)
 ```
 ### Pop Element
 
+```
+pop(){
+    // If we have no item
+    if (!this.head) return undefined;
 
+    // If we have too many item and remove 
+    let temp = this.head;
+    let pre = this.head;
 
+    while (this.temp) {
+        pre = temp
+        temp = temp.next
+    }
+    this.tail = pre;
+    this.tail.next = null;
+    this.length--;
 
+    // if we have only one item
+    if (this.length === 0) {
+        this.head = null
+        this.tail = null
+    }
+    return temp;
+  }
+}
+```
 
+### unshift()
 
+```
+unshift(value){
+  const newNode = new Node(value);
 
-
-
-
-
+  if(this.head){
+    this.head = newNode;
+    this.tail = newNode;
+    
+  }
+  else{
+    newNode.next = this.head;
+    this.head = newNode;
+  }
+   this.length++;
+return this;
+}
+```
 
 # Advance Topic
 ## DOM Manipulation
