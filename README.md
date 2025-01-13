@@ -1207,6 +1207,20 @@ const addTwo = sum(2); // Partially apply the first argument
 console.log(addTwo(3)); // Output: 12
 ```
 
+## Debugger: A debugger is a software tool that helps developers identify and fix bugs (errors) in their code.
+NOTE: In js use debugger keyword and run code then u will see on browser debugger
+console.log()
+console.error();
+console.time();
+console.timeEnd();
+console.table();
+console.trace();
+
+## Jest:
+Jest is a JavaScript testing framework designed to ensure correctness in JavaScript applications. It is widely used for testing web applications, especially those built with React. Developed and maintained by Facebook, Jest is known for its simplicity, efficiency, and powerful features.
+
+npm i
+npm i 
 
 
 
