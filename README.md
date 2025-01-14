@@ -653,7 +653,7 @@ class LinkedList {
 let ll = new LinkedList(4);
 console.log(ll);
 ```
-### Push Element
+### Push Element (Add element in last)
 ```
 class Node {
   constructor(value){
@@ -689,7 +689,7 @@ let ll = new LinkedList(4);
 ll.push(2);
 console.log(ll)
 ```
-### Pop Element
+### Pop Element (Remove element from last)
 
 ```
 pop(){
@@ -718,7 +718,7 @@ pop(){
 }
 ```
 
-### unshift()
+### unshift() (Add element in front)
 
 ```
 unshift(value){
@@ -737,7 +737,7 @@ unshift(value){
 return this;
 }
 ```
-### shift
+### shift (Remove element into the end)
 ```
 shift(){
   let temp = this.head;
@@ -753,7 +753,7 @@ shift(){
 return temp;
 }
 ```
-### get
+### get (Get data from linkedlist)
 
 ```
 get(index){
@@ -769,6 +769,73 @@ get(index){
 }
 ```
 
+### set (Set data into linkedlist)
+```
+set(index, value){
+  if(index < 0 || index >= this.length ) 
+    return undefined;
+  
+  let temp = this.get(index);
+  if(temp){
+    temp.value = value;
+    return true;
+  }
+  return false;
+}
+```
+### insert (add element anywhere in linkedlist)
+```
+insert(index , value){
+  if(index === 0) return this.unshift(value);
+  if(index === this.length) return this.push(value);
+  if(index === 0 || index >= this.length) return false;
+  
+  const newNode = new Node(value);
+  let temp = this.get(index-1);
+  
+  newNode.next = temp.next;
+  temp.next = newNode;
+  this.length++;
+  return true;
+}
+```
+### remove (delete element from anywhere)
+```
+remove(index){
+  if(index === 0) return this.shift();
+  if(index === this.length-1) return this.pop();
+  
+  if(index >0 || index >= this.length){
+    return false;
+  }
+  
+  let prev = this.get(index-1);
+  let temp =  prev.next();
+  
+  prev.next = temp.next;
+  temp.next = null;
+  this.length--;
+  return temp;
+}
+```
+### reverse ( reverse the linkedlist)
+```
+reverse(){
+  let temp = this.head;
+  this.head = this.tail;
+  this.tail = temp;
+  let next = temp.next;
+  let prev = null;
+  
+  for(let i=0; i<this.length; i++){
+    next = temp.next;
+    temp.next = prev;
+    prev = temp;
+    temp = next
+  }
+  return this
+}
+```
 ---
 # Advance Topic
 ## DOM Manipulation
