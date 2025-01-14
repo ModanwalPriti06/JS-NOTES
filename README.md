@@ -1216,7 +1216,8 @@ console.timeEnd();
 console.table();
 console.trace();
 
-## JEST Learn got to repo - https://github.com/ModanwalPriti06/JESTtesting/tree/master
+### JEST Learn got to repo 
+https://github.com/ModanwalPriti06/JESTtesting/tree/master
 
 ### Type of Tests
 1. Unit Testing
@@ -1224,7 +1225,8 @@ console.trace();
 3. End to End testing
 
 
-## Jest with ES6 checkout MathSolver Repo - https://github.com/ModanwalPriti06/SImplifyEquationCalculatorJS-Project
+### Jest with ES6 checkout MathSolver Repo 
+https://github.com/ModanwalPriti06/SImplifyEquationCalculatorJS-Project
 
 
 
