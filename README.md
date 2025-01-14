@@ -1224,7 +1224,6 @@ https://github.com/ModanwalPriti06/JESTtesting/tree/master
 2. Integration Testing
 3. End to End testing
 
-
 ### Jest with ES6 checkout MathSolver Repo 
 https://github.com/ModanwalPriti06/SImplifyEquationCalculatorJS-Project
 
