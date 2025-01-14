@@ -1216,13 +1216,7 @@ console.timeEnd();
 console.table();
 console.trace();
 
-## Jest:
-Jest is a JavaScript testing framework designed to ensure correctness in JavaScript applications. It is widely used for testing web applications, especially those built with React. Developed and maintained by Facebook, Jest is known for its simplicity, efficiency, and powerful features.
-
-npm i
-npm i 
-
-
+## JEST Learn got to repo - https://github.com/ModanwalPriti06/JESTtesting/tree/master
 
 
 
