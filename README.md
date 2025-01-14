@@ -1218,6 +1218,14 @@ console.trace();
 
 ## JEST Learn got to repo - https://github.com/ModanwalPriti06/JESTtesting/tree/master
 
+### Type of Tests
+1. Unit Testing
+2. Integration Testing
+3. End to End testing
+
+
+## Jest with ES6 checkout MathSolver Repo - https://github.com/ModanwalPriti06/SImplifyEquationCalculatorJS-Project
+
 
 
 
