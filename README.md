@@ -580,9 +580,6 @@ for (let i = 0; i < arr.length; i++) {
 }
 console.log(arr)
 ```
-
-
-
 ## Notes: Quick Understand of Quick Sort
 Step 1: Choose a Pivot
 Step 2: Partition the Array
@@ -740,7 +737,39 @@ unshift(value){
 return this;
 }
 ```
+### shift
+```
+shift(){
+  let temp = this.head;
+  if(!this.head) return undefined   //empty LinkedList
+  this.temp = this.head;            // multiple node in LinkedList
+  this.head = this.temp.next;
+  temp.next = null
+  this.length--;
+  
+  if(this.length === 0){      //when have only 1 item
+    this.tail == null
+  }
+return temp;
+}
+```
+### get
 
+```
+get(index){
+  if(index < 0 || index >= this.length){
+    return undefined;
+  }
+  
+  let temp = this.head;
+  for(let i=0; i<index ; i++){
+    temp = temp.next;
+  }
+  return temp;
+}
+```
+
+---
 # Advance Topic
 ## DOM Manipulation
 
