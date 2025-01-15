@@ -1305,12 +1305,12 @@ console.log(addTwo(3)); // Output: 12
 
 ## Debugger: A debugger is a software tool that helps developers identify and fix bugs (errors) in their code.
 NOTE: In js use debugger keyword and run code then u will see on browser debugger
-console.log()
-console.error();
-console.time();
-console.timeEnd();
-console.table();
-console.trace();
+1. console.log()
+2. console.error();
+3. console.time();
+4. console.timeEnd();
+5. console.table();
+6. console.trace();
 
 ### JEST Learn got to repo 
 https://github.com/ModanwalPriti06/JESTtesting/tree/master
