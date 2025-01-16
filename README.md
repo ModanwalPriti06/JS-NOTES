@@ -1347,6 +1347,14 @@ Occurs on the client side.
 The browser modifies the page’s DOM based on malicious input, allowing scripts to execute.
 Example: Direct manipulation of innerHTML or eval() without sanitization.
 
+## Sanitize User input
+
+checkout link - https://www.npmjs.com/package/sanitize-html
+1. npm install sanitize-html
+2. In package json add in script : "start" : 'snowpack dev'
+Example: 
+sanitizeHtml(query)
+
 
 
 
