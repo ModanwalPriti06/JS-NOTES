@@ -1323,7 +1323,31 @@ https://github.com/ModanwalPriti06/JESTtesting/tree/master
 ### Jest with ES6 checkout MathSolver Repo 
 https://github.com/ModanwalPriti06/SImplifyEquationCalculatorJS-Project
 
-### 
+### NPM Audit
+checkout this and get to know about semantic - https://semver.org/  
+Examplt : ^4.12.1 - (major.minor.patch)
+
+## Cross Site Scripting Security Issue:
+Cross-Site Scripting (XSS) is a type of security vulnerability in web applications where attackers inject malicious scripts (usually JavaScript) into web pages viewed by other users. This attack exploits vulnerabilities in input validation or output encoding to execute unauthorized scripts in the context of a trusted website.
+
+### Types of XSS
+#### 1. Stored XSS (Persistent XSS):
+Malicious scripts are stored on the server (e.g., in a database).
+Scripts are served to users when they view a compromised page.
+Example: Posting a script as a comment on a blog, which then executes for all viewers.
+
+#### 2. Reflected XSS:
+Malicious scripts are included in the URL or query parameters.
+The server reflects the input back in the response without proper validation.
+Example: A search result page displaying unescaped user input.
+alert(document.cookie);
+
+#### 3. DOM-based XSS:
+Occurs on the client side.
+The browser modifies the page’s DOM based on malicious input, allowing scripts to execute.
+Example: Direct manipulation of innerHTML or eval() without sanitization.
+
+
 
 
 
