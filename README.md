@@ -1371,7 +1371,15 @@ In cookie inside is there Http and secure and which cookie api is only http that
 5. HTTP Communication: Cookies are sent automatically with each HTTP request to the domain that set them.
 6. Cookies are domain-specific and can be restricted to specific paths within a website.
 
+## BlackBox, Cohesion and coupling 
+A pure function is low coupling high cohesion everytime.
+Black box: In JavaScript, the term "black box" can refer to different concepts depending on the context. Generally, it implies something whose internal workings are hidden or not directly visible to the user or developer
 
+## Closure:
+
+A closure is the combination of a function bundled together (enclosed) where innerfunction can access outer scope function and variable.
+In other words, a closure gives a function access to its outer scope. 
+innerfunction able to access outside variable and function.
 
 
 
