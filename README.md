@@ -1361,6 +1361,19 @@ Note: In html js css all code are publice anyone can inspect and see the code fo
 .env = add key  (keyname = 'werfwrjfbwrejf')
 server.js = 1. require dotenv 2. const API_KEY = process.env.keyname
 
+### Cookie
+In JavaScript, a cookie is a small piece of data stored on the user's browser by a website. Cookies are commonly used to store information like user preferences, session IDs, or tracking data, which can be sent back to the server with each subsequent request to maintain state or personalize the user's experience.
+
+In cookie inside is there Http and secure and which cookie api is only http that can access only server which api hit is secure and http that only can see data in frontend in key value pair.
+#### Key Features of Cookies:
+1. Data Storage: Cookies can store simple data as key-value pairs.
+2. Persistence: Cookies can be either: 1) Session Cookies: Automatically deleted when the browser is closed. 2)Persistent Cookies: Stored until a specified expiration date.
+5. HTTP Communication: Cookies are sent automatically with each HTTP request to the domain that set them.
+6. Cookies are domain-specific and can be restricted to specific paths within a website.
+
+
+
+
 
 
 
