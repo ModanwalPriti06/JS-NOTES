@@ -1393,6 +1393,9 @@ function print(variable) {
 let a = print(1);
 a(2);
 ```
+### NaN: Nan is not equal to anything
+### Async and Defer
+![Uploading Screenshot 2025-01-18 at 6.14.15 PM.png…]()
 
 
 
