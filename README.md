@@ -1355,6 +1355,12 @@ checkout link - https://www.npmjs.com/package/sanitize-html
 Example: 
 sanitizeHtml(query)
 
+### Code is public 
+Note: In html js css all code are publice anyone can inspect and see the code for this reason we use api key in backend
+.gitignore file = .env
+.env = add key  (keyname = 'werfwrjfbwrejf')
+server.js = 1. require dotenv 2. const API_KEY = process.env.keyname
+
 
 
 
