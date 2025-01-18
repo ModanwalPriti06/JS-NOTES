@@ -1380,7 +1380,19 @@ Black box: In JavaScript, the term "black box" can refer to different concepts d
 A closure is the combination of a function bundled together (enclosed) where innerfunction can access outer scope function and variable.
 In other words, a closure gives a function access to its outer scope. 
 innerfunction able to access outside variable and function.
+```
+function print(variable) {
+  let c = 3;
+  return function func(variable2){
+    console.log(variable);
+    console.log(variable2);
+    console.log(c);
+  }
+}
 
+let a = print(1);
+a(2);
+```
 
 
 
