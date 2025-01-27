@@ -1397,6 +1397,12 @@ a(2);
 ### Async and Defer
 ![Uploading Screenshot 2025-01-18 at 6.14.15 PM.png…]()
 
+## Callback: 
+- A callback is a function that you pass as an argument to another function, and it gets called (or "called back") later when some task is done.
+- Think of it like this:
+ You ask someone to do a task for you, and when they finish, they call you to tell you it’s done. That "call" they make is the callback.
+- Simply just think a callback function a function which one you want to run after some criteria and based on requirement;
+- example: settimeout one parameter is callback function which want to run after 2 parameter duration, same if we click button want to run async funstion in js on click event listner..
 
 
 
