@@ -1402,7 +1402,22 @@ a(2);
 - Think of it like this:
  You ask someone to do a task for you, and when they finish, they call you to tell you it’s done. That "call" they make is the callback.
 - Simply just think a callback function a function which one you want to run after some criteria and based on requirement;
-- example: settimeout one parameter is callback function which want to run after 2 parameter duration, same if we click button want to run async funstion in js on click event listner..
+- example: settimeout one parameter is callback function which want to run after 2 parameter duration, same if we click button want to run async funstion in js on click event listner.
+
+## Callback hell: inside callback funstion call another callback function
+example: inside setTimeout we are calling another callback setInterval and so on.
+```
+setTimeout(()=>{
+  console.log('inside')
+  setTimeout(()=>{
+    console.log('inside 1');
+     setTimeout(()=>{
+         console.log('inside 1')
+      },100)
+   },100)
+},100)
+```
+
 
 
 
