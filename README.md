@@ -2,7 +2,7 @@
 Basic Javascript notes for beginners
 
 
-# Pipe and debouncng and generator
+# Pipe and debouncing and generator
 
 ## How to Start
 1. Create new repo and add README file.
