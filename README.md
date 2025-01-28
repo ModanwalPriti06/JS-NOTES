@@ -1426,15 +1426,50 @@ function callPromiseFunc(duration){
   })
 }
 
-setTimeout(()=>{
-  console.log('running...')
-},1000)
-
+// setTimeout(()=>{
+//  console.log('running...')
+// },1000)
 
 const data = callPromiseFunc(250);
-data.then((msg)=>{
+data.then((msg)=>{                  //then is working like a callback
   console.log("promise running...")
 })
+```
+## Other example how promise use in optimize callback
+```
+setTimeout(()=>{
+  console.log('1');
+  setTimeout(()=>{
+    console.log('2')
+  },1000)
+},1000)
+```
+this above code change in promise
+```
+function convertPromise((duration)=>{
+  return new Promise((resolved, reject)=>{
+    setTimeout(resolved, duration);
+  })
+}
+
+1. callPromiseFunc(250).then((msg)=>{
+  console.log('1');
+  callPromiseFunc(250).then(()=>{
+    console.log('2')
+  })
+})
+
+or
+
+2. callPromiseFunc(250).then(()=>{
+  console.log('1');
+  return callPromiseFunc(250);
+}).then(()=>{
+    console.log('2')
+    return callPromiseFunc(250);
+})
+  
+output: 1 2
 ```
 
 
