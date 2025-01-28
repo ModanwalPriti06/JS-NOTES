@@ -1417,6 +1417,25 @@ setTimeout(()=>{
    },100)
 },100)
 ```
+# Promises
+```
+
+function callPromiseFunc(duration){
+  return new Promise((resolved, reject)=>{
+    setTimeout(resolved, duration);
+  })
+}
+
+setTimeout(()=>{
+  console.log('running...')
+},1000)
+
+
+const data = callPromiseFunc(250);
+data.then((msg)=>{
+  console.log("promise running...")
+})
+```
 
 
 
