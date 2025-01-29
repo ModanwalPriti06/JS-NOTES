@@ -1471,6 +1471,15 @@ or
   
 output: 1 2
 ```
+### Promise concurrency
+- Promise.all(): Fulfills when all of the promises fulfill; rejects when any of the promises rejects.
+- Promise.allSettled(): Fulfills when all promises settle.
+- Promise.any(): Fulfills when any of the promises fulfills; rejects when all of the promises reject.
+- Promise.race(): Settles when any of the promises settles. In other words, fulfills when any of the promises fulfills; rejects when any of the promises rejects.
+- Promise.reject(): Returns a new Promise object that is rejected with the given reason.
+- Promise.resolve(): Returns a Promise object that is resolved with the given value. 
+##### All these methods take an iterable of promises (thenables, to be exact) and return a new promise
+
 
 
 
