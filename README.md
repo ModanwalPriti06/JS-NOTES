@@ -1419,7 +1419,6 @@ setTimeout(()=>{
 ```
 # Promises
 ```
-
 function callPromiseFunc(duration){
   return new Promise((resolved, reject)=>{
     setTimeout(resolved, duration);
@@ -1471,6 +1470,25 @@ or
   
 output: 1 2
 ```
+## Async and Await
+```
+function setTimeoutPromise(delay) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(`You waited ${delay} milliseconds`);
+    }, delay);
+  });
+}
+
+async function doStuff(){
+  const message1 = await setTimeoutPromise(250);
+  console.log('message 1', message1);
+  const message2 = await setTimeoutPromise(250);
+  console.log('message2', message2);
+}
+
+doStuff();
+```
 ### Promise concurrency
 - Promise.all(): Fulfills when all of the promises fulfill; rejects when any of the promises rejects.
 - Promise.allSettled(): Fulfills when all promises settle.
@@ -1479,6 +1497,8 @@ output: 1 2
 - Promise.reject(): Returns a new Promise object that is rejected with the given reason.
 - Promise.resolve(): Returns a Promise object that is resolved with the given value. 
 ##### All these methods take an iterable of promises (thenables, to be exact) and return a new promise
+
+
 
 
 
