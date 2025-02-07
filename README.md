@@ -1480,11 +1480,35 @@ function setTimeoutPromise(delay) {
   });
 }
 
+
+//here not handling try and catch when return reject promise then will be issue
 async function doStuff(){
   const message1 = await setTimeoutPromise(250);
   console.log('message 1', message1);
   const message2 = await setTimeoutPromise(250);
   console.log('message2', message2);
+}
+
+doStuff();
+```
+```
+function setTimeoutPromise(delay) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject('Error');
+    }, delay);
+  });
+}
+
+async function doStuff(){
+  try{
+    const message1 = await setTimeoutPromise(250);
+    console.log('message 1', message1);
+    const message2 = await setTimeoutPromise(250);
+    console.log('message2', message2);
+  }catch(err){
+    console.error(err)
+  }
 }
 
 doStuff();
