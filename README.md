@@ -1521,9 +1521,34 @@ doStuff();
 - Promise.reject(): Returns a new Promise object that is rejected with the given reason.
 - Promise.resolve(): Returns a Promise object that is resolved with the given value. 
 ##### All these methods take an iterable of promises (thenables, to be exact) and return a new promise
+```
+new Promise((resolve, reject)=> resolve(obj)).then(msg=>console.log(msg);
+```
 
 ## Event Loop and Delegation
-JavaScript all code run in main thread
+- JavaScript all code run in main thread
+- In JavaScript, the event loop is a mechanism that allows the language to perform non-blocking operations, even though it has a single-threaded execution model. This means JavaScript can handle tasks like user interactions, network requests, and timers without waiting for each operation to complete before moving on to the next.
+
+## Event Delegation:
+- Event delegation is a technique that leverages the concept of event propagation (bubbling) to manage events efficiently.
+Suppose you have a list of buttons inside a <div> and want to handle click events for each button:
+```
+<div id="buttonContainer">
+  <button>Button 1</button>
+  <button>Button 2</button>
+  <button>Button 3</button>
+</div>
+```
+Instead of adding a click event listener to each button, you can add a single event listener to the parent <div>:
+```
+document.getElementById('buttonContainer').addEventListener('click', function(event) {
+  if (event.target.tagName === 'BUTTON') {
+    console.log(event.target.textContent + ' was clicked');
+  }
+});
+```
+
+
 
 
 
