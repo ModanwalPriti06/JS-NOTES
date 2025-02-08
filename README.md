@@ -1522,6 +1522,10 @@ doStuff();
 - Promise.resolve(): Returns a Promise object that is resolved with the given value. 
 ##### All these methods take an iterable of promises (thenables, to be exact) and return a new promise
 
+## Event Loop and Delegation
+JavaScript all code run in main thread
+
+
 
 
 
