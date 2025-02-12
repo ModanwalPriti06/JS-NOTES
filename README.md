@@ -1125,9 +1125,10 @@ const person={
 
 console.log(person.birthYear)
 ```
-### Bind , Call and Apply
+## Bind , Call and Apply
 
-Bind: In JavaScript, bind() is a method used to create a new function where the value of ```this``` is explicitly set to a specific object, and optionally, you can predefine some arguments for that function.
+### 1. Bind
+- Bind: In JavaScript, bind() is a method used to create a new function where the value of ```this``` is explicitly set to a specific object, and optionally, you can predefine some arguments for that function.
 ```
 window.name = 'Global Name';
 const person = {
@@ -1159,7 +1160,21 @@ const res = nums.map(prod.bind(null, 2));
 console.log(res)
 
 ```
-Apply: The difference between call and apply in call, they have to pass parameter normally and in apply we send parameter in array
+### 2. call():
+- It immediately invokes the function, passing the this value as the first argument and the function's arguments after that. The arguments are passed one by one (not as an array).
+
+### Apply: 
+- The difference between call and apply in call, they have to pass parameter normally and in apply we send parameter in array.
+- It immediately invokes the function, similar to call(), but the arguments are passed as an array or an array-like object.
+```
+const obj = { name: "Alice" };
+function greet(age, country) {
+  console.log(`Hello ${this.name}, you are ${age} years old and live in ${country}.`);
+}
+
+greet.apply(obj, [25, "USA"]); // Output: Hello Alice, you are 25 years old and live in USA.
+
+```
 ```
 function sum(...nums){
   return nums.reduce((acc,cur)=> acc+cur, 0)
@@ -1170,6 +1185,10 @@ console.log(sum.apply(null, nums));
 console.log(sum.call(null,2,3,4,5))
 
 ```
+## Summary
+- bind() returns a new function with a fixed this value and pre-set arguments, which you can call later.
+- call() immediately calls the function, with arguments passed one by one.
+- apply() immediately calls the function, with arguments passed as an array.
 
 Project - Simplify Quation Project
 
