@@ -1582,7 +1582,14 @@ document.getElementById('buttonContainer').addEventListener('click', function(ev
 
 ### Difference between null and undefined
 
- | a | b |
+| ** Feature **             | ** Null **             | ** undefined**      |
+|-------------------------|----------------------------------|
+| Definition | Represents an intentional absence of value. | Represents a variable that has been declared but not assigned a value. |
+| Type	 | object (typeof null returns "object")	| undefined (typeof undefined returns "undefined") |
+| Usage | Used when we want to explicitly assign "no value" to a variable.	 | Default value for uninitialized variables, missing function parameters, or missing object properties. |
+| Example | let x = null;	| let y; console.log(y); // undefined |
+
+ 
 
 
 
