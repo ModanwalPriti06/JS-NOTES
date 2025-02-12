@@ -1612,6 +1612,33 @@ function debounceSearch(query) {
 
 ```
 
+## Can you explain the concept of "throttling" and how it differs from debouncing?
+- Throttling is a technique used to limit the rate at which a function is invoked. Unlike debouncing, which waits for a pause in user input, throttling ensures that the function is called at most once within a specified time interval, no matter how many times the event occurs.
+
+#### Difference between Debouncing and Throttling:
+- Debouncing: Only invokes the function once the event has stopped being triggered for a specified time. (i.e., "Wait until the activity stops.")
+- Throttling: Restricts the function to be executed at most once in a specified time interval, even if the event continues to be triggered. (i.e., "Limit how frequently the function can run.")
+```
+let throttleTimeout;
+function throttleSearch(query) {
+  if (!throttleTimeout) {
+    throttleTimeout = setTimeout(() => {
+      // Make API call or execute function
+      console.log(`Searching for: ${query}`);
+      throttleTimeout = null; // Reset after the specified interval
+    }, 1000); // Call at most once every 1 second
+  }
+}
+
+```
+
+
+
+
+
+
+
+
 
 
 
