@@ -1635,50 +1635,50 @@ function throttleSearch(query) {
 - In a browser, this refers to the window object. In Node.js, this refers to the global object.
 - Global Context: this refers to the global object.
   ```
-  console.log(this); // In a browser, it will log the window object.
+    console.log(this); // In a browser, it will log the window object.
   ```
 - Method Context: this refers to the object the method is called on.
   ```
-    function test() {
-  console.log(this);
-  }
-  test(); // In non-strict mode, 'this' will refer to the global object.
-
-  or
-
-  const person = {
-  name: "John",
-  greet: function() {
-    console.log(this.name); // 'this' refers to the 'person' object
-  }
-  };
-  person.greet(); // Output: "John"
+  function test() {
+    console.log(this);
+    }
+    test(); // In non-strict mode, 'this' will refer to the global object.
+  
+    or
+  
+    const person = {
+    name: "John",
+    greet: function() {
+      console.log(this.name); // 'this' refers to the 'person' object
+    }
+    };
+    person.greet(); // Output: "John"
   ```
 - Arrow Functions: this is inherited from the outer context.
 ```
-const obj = {
-  name: "Alice",
-  greet: () => {
-    console.log(this.name); // 'this' does NOT refer to 'obj', instead it refers to the enclosing scope
-  }
-};
-obj.greet(); // Output: undefined (because 'this' is inherited from the global context)
+  const obj = {
+    name: "Alice",
+    greet: () => {
+      console.log(this.name); // 'this' does NOT refer to 'obj', instead it refers to the enclosing scope
+    }
+  };
+  obj.greet(); // Output: undefined (because 'this' is inherited from the global context)
 ```
 - Constructor Functions: this refers to the newly created instance.
 ```
-function Person(name) {
-  this.name = name;
-}
-const john = new Person("John");
-console.log(john.name); // Output: "John"
+  function Person(name) {
+    this.name = name;
+  }
+  const john = new Person("John");
+  console.log(john.name); // Output: "John"
 ```
 - Explicit Binding: call, apply, and bind allow you to set this explicitly.
 ```
-function greet() {
-  console.log(this.name);
-}
-const person = { name: "Alice" };
-greet.call(person); // Output: "Alice"
+  function greet() {
+    console.log(this.name);
+  }
+  const person = { name: "Alice" };
+  greet.call(person); // Output: "Alice"
 ```
 
 
