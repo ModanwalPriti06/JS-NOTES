@@ -1699,6 +1699,14 @@ function throttleSearch(query) {
   const person = { name: "Alice" };
   greet.call(person); // Output: "Alice"
 ```
+## What is the difference between localStorage and sessionStorage in JavaScript, and how do they differ in terms of lifespan and scope?
+- localStorage: It stores data with no expiration time. The data will persist even after the browser is closed or the computer is restarted, until it is explicitly removed via JavaScript or the user clears their browser data.
+- sessionStorage: It also stores data locally, but the data is only available for the duration of the page session. This means that the data is lost when the browser window or tab is closed, but it persists across page reloads within the same session.
+
+So the key difference is the lifetime of the data:
+
+- localStorage persists until removed manually.
+- sessionStorage is cleared when the session ends (i.e., when the browser/tab is closed).
 
 
 
