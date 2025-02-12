@@ -1134,7 +1134,7 @@ const person = {
   name:'priti'
 }
 function printName(){
-  console.log(this.name);
+  console.log(this.name);   // this is using that is binding define value of this object 
 }
 
 const res = printName.bind(person);
@@ -1680,6 +1680,7 @@ function throttleSearch(query) {
   const person = { name: "Alice" };
   greet.call(person); // Output: "Alice"
 ```
+
 
 
 
