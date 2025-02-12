@@ -1436,6 +1436,11 @@ setTimeout(()=>{
 },100)
 ```
 # Promises
+- In JavaScript, a Promise is an object that represents the eventual completion or failure of an asynchronous operation and its resulting value.
+- A Promise can be in one of three states:
+-- Pending: The initial state, indicating that the operation is still ongoing.
+-- Fulfilled: The operation completed successfully, and a resulting value is available.
+-- Rejected: The operation failed, and a reason for the failure is available.
 ```
 function callPromiseFunc(duration){
   return new Promise((resolved, reject)=>{
@@ -1544,6 +1549,15 @@ new Promise((resolve, reject)=> resolve(obj)).then(msg=>console.log(msg);
 ```
 
 ## Event Loop and Delegation
+- The event loop in JavaScript is a mechanism that handles asynchronous operations. JavaScript is single-threaded, meaning it executes code sequentially in a single call stack.
+
+### How it works:
+- Call Stack: JavaScript executes synchronous code line by line, pushing and popping function calls from the stack.
+- Web APIs: Asynchronous tasks like setTimeout, fetch, or event listeners are handled by Web APIs.
+- Callback Queue & Microtask Queue: Once asynchronous tasks are completed, their callbacks are placed in the queue.
+- - Microtasks (Promises, process.nextTick in Node.js) are prioritized over macrotasks (setTimeout, setInterval).
+-  Event Loop: It constantly checks if the call stack is empty and pushes queued callbacks for execution.
+---
 - JavaScript all code run in main thread
 - In JavaScript, the event loop is a mechanism that allows the language to perform non-blocking operations, even though it has a single-threaded execution model. This means JavaScript can handle tasks like user interactions, network requests, and timers without waiting for each operation to complete before moving on to the next.
 
