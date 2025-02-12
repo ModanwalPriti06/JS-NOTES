@@ -1600,6 +1600,13 @@ document.getElementById('buttonContainer').addEventListener('click', function(ev
   }
 });
 ```
+### Advantage
+This approach has several advantages:
+- Improved performance
+- Dynamic Elements
+
+
+
 
 ### Difference between null and undefined
 
