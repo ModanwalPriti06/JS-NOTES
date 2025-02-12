@@ -884,7 +884,24 @@ Here tetxContent =  hello , Bye. But innerText give output only which is visible
 3. object inside obje destructure = const {address : {street, pincode, disct} } = obj
 4. Default Destructure also we can = const {address : {street, pincode, disct, zipeer = 'xyz'} } = obj
 
-## Rest Operater and Spread Operator
+## Rest Operater and Spread Operator:
+- The rest operator collects multiple elements into a single array or object
+- The spread operator expands an iterable (like an array or object) into individual elements. It's commonly used in function calls, array literals, and object literals.
+Example:
+#### Rest Operator example
+```
+function sum(...numbers) {
+  return numbers.reduce((acc, curr) => acc + curr, 0);
+}
+console.log(sum(1, 2, 3)); // Output: 6
+```
+#### spread Operator
+```
+const arr1 = [1, 2];
+const arr2 = [3, 4];
+const combined = [...arr1, ...arr2];
+console.log(combined); // Output: [1, 2, 3, 4]
+```
 ```
 index.js
 
