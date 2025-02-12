@@ -1127,7 +1127,7 @@ console.log(person.birthYear)
 ```
 ### Bind , Call and Apply
 
-Bind: In JavaScript, bind() is a method used to create a new function where the value of this is explicitly set to a specific object, and optionally, you can predefine some arguments for that function.
+Bind: In JavaScript, bind() is a method used to create a new function where the value of ```this``` is explicitly set to a specific object, and optionally, you can predefine some arguments for that function.
 ```
 window.name = 'Global Name';
 const person = {
@@ -1159,7 +1159,7 @@ const res = nums.map(prod.bind(null, 2));
 console.log(res)
 
 ```
-Apply: The difference between call and apply in call they have to pass parameter normally and in apply we send parameter in array
+Apply: The difference between call and apply in call, they have to pass parameter normally and in apply we send parameter in array
 ```
 function sum(...nums){
   return nums.reduce((acc,cur)=> acc+cur, 0)
