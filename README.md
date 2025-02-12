@@ -958,7 +958,8 @@ console.log(person)   // {firstName: 'priti', lastName: 'modanwal'}
 ```
 
 ## Null Coalescing
-The null coalescing operator (??) in JavaScript is used to provide a default value when a variable is either null or undefined. It was introduced in ECMAScript 2020 (ES11) and is often used as a shorthand for ensuring a fallback value.
+- In JavaScript, the nullish coalescing operator (??) is a logical operator that returns its right-hand operand when its left-hand operand is null or undefined; otherwise, it returns its left-hand operand.
+- The null coalescing operator (??) in JavaScript is used to provide a default value when a variable is either null or undefined. It was introduced in ECMAScript 2020 (ES11) and is often used as a shorthand for ensuring a fallback value.
 
 Note : If you are using this ?? operation take care can only compare between 2 operand (1 ?? 2)
 ```
