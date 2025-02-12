@@ -1581,7 +1581,9 @@ new Promise((resolve, reject)=> resolve(obj)).then(msg=>console.log(msg);
 - In JavaScript, the event loop is a mechanism that allows the language to perform non-blocking operations, even though it has a single-threaded execution model. This means JavaScript can handle tasks like user interactions, network requests, and timers without waiting for each operation to complete before moving on to the next.
 
 ## Event Delegation:
+-  Event delegation is a pattern where you add a single event listener to a parent element instead of adding individual listeners to each child element. The idea is to leverage the event bubbling mechanism to catch events on the parent and then handle them based on which child element was clicked.
 - Event delegation is a technique that leverages the concept of event propagation (bubbling) to manage events efficiently.
+  
 Suppose you have a list of buttons inside a <div> and want to handle click events for each button:
 ```
 <div id="buttonContainer">
