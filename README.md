@@ -1589,9 +1589,28 @@ document.getElementById('buttonContainer').addEventListener('click', function(ev
 | Usage | Used when we want to explicitly assign "no value" to a variable.	 | Default value for uninitialized variables, missing function parameters, or missing object properties. |
 | Example | let x = null;	| let y; console.log(y); // undefined |
 
+## What is the difference between synchronous and asynchronous JavaScript?
+- Synchronous operations run line by line, blocking the execution of any subsequent code until the current task is completed. So, each operation waits for the previous one to finish before starting.
+- Asynchronous operations allow code to run non-blocking, meaning the execution can continue with other tasks without waiting for the current task to finish. When the task is completed, it typically triggers a callback, promise, or event to handle the result.
  
+## Can you explain the difference between setTimeout() and setInterval() in JavaScript?
+- setTimeout(): This is used to execute a function once after a specified delay (in milliseconds). After the delay, the function is invoked and it does not repeat.
+- setInterval(): This is used to execute a function repeatedly at a specified interval (in milliseconds). It keeps calling the function after each interval until you clear it using clearInterval().
 
+## What do you understand by the concept of "debouncing" in JavaScript?
+- Debouncing is used to limit the rate at which a function is executed, typically to handle scenarios where the function is called repeatedly, like on user input events (e.g., typing in a search box).
+- In the case of search functionality, for example, debouncing prevents an API request from being sent on every keystroke. Instead, it waits for the user to stop typing for a specified period of time before triggering the API call. This helps improve performance and reduces unnecessary calls.
+```
+let debounceTimeout;
+function debounceSearch(query) {
+  clearTimeout(debounceTimeout); // Clear the previous timeout
+  debounceTimeout = setTimeout(() => {
+    // Make API call after the user stops typing for 300ms
+    console.log(`Searching for: ${query}`);
+  }, 300);
+}
 
+```
 
 
 
