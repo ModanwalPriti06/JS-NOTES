@@ -1580,6 +1580,10 @@ document.getElementById('buttonContainer').addEventListener('click', function(ev
 });
 ```
 
+### Difference between null and undefined
+
+ | a | b |
+
 
 
 
