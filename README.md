@@ -1454,6 +1454,67 @@ setTimeout(()=>{
    },100)
 },100)
 ```
+# Splice and Slice
+## Splice :
+- The splice() method change the original array
+- Removes, replaces, or adds elements at a specific index.
+- Modifies the original array.
+- Returns the removed elements.
+Syntax: array.splice(startIndex, deleteCount, item1, item2, ...);
+Exam: arr.splice(1,3,'apple');
+```
+let arr = [1, 2, 3, 4, 5];
+let removed = arr.splice(1, 2); // Removes 2 elements from index 1
+console.log(arr);      // [1, 4, 5]
+console.log(removed);  // [2, 3] (Removed elements)
+```
+
+## Slice : 
+- Extracts a portion of the array and returns a new array.
+- Does NOT modify the original array.
+Syntax:  array.slice(startIndex, endIndex);  // startIndex include and endIndex exclude
+```
+let arr = [1, 2, 3, 4, 5];
+let newArr = arr.slice(1, 4); // Extracts elements from index 1 to 3
+console.log(arr);    // [1, 2, 3, 4, 5] (Original remains unchanged)
+console.log(newArr); // [2, 3, 4] (Extracted portion)
+```
+| Feature | splice() (Mutable)	 | slice() (Immutable)
+| ------------ | ----------- | ------------- |
+| Modifies original array? | 	✅ Yes	| ❌ No | 
+| Returns removed elements?	| ✅ Yes	| ❌ No |
+| Can add elements?	| ✅ Yes	| ❌ No | 
+| Used for extraction?	| ❌ No	| ✅ Yes |
+| Works with negative indices?	| ❌ No	| ✅ Yes | 
+
+### toString() Method in JavaScript
+- The toString() method is used to convert an object, array, or other data types into a string representation.
+### Difference Between toString() and join()
+- toString() uses a default comma as a separator.
+- join() allows you to specify a custom separator.
+
+## String function
+
+| Method	| Description | 
+| ------ | -------- | 
+| length	| Get string length | 
+| charAt(index) | 	Get character at index| 
+| charCodeAt(index)	|  Get Unicode of character | 
+| toUpperCase() / toLowerCase()	|  Convert case | 
+| trim(), trimStart(), trimEnd()| 	Remove spaces | 
+| slice(start, end) | 	Extract part of string | 
+| substring(start, end)	|  Extract substring (no negatives) | 
+| indexOf(substring)	| Find first occurrence | 
+| lastIndexOf(substring)	 |  Find last occurrence | 
+| includes(substring)	|  Check if string contains substring | 
+| startsWith(substring), endsWith(substring) | 	Check start/end of string | 
+| replace(old, new)	| Replace substring | 
+| split(separator)	|  Convert string to array | 
+| concat()	|  Concatenate strings | 
+| Template Literals ( ) | 	Modern way to concatenate | 
+
+
+
 # Promises
 - In JavaScript, a Promise is an object that represents the eventual completion or failure of an asynchronous operation and its resulting value.
 - A Promise can be in one of three states:
@@ -1606,8 +1667,6 @@ This approach has several advantages:
 - Dynamic Elements
 
 
-
-
 ### Difference between null and undefined
 
 | **Feature**   | **Null**             | **undefined**      |
@@ -1716,6 +1775,8 @@ So the key difference is the lifetime of the data:
 
 - localStorage persists until removed manually.
 - sessionStorage is cleared when the session ends (i.e., when the browser/tab is closed).
+
+
 
 
 
