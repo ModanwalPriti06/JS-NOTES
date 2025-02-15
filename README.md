@@ -1513,9 +1513,29 @@ console.log(newArr); // [2, 3, 4] (Extracted portion)
 | concat()	|  Concatenate strings | 
 | Template Literals ( ) | 	Modern way to concatenate | 
 
+## IIFE - ( Immediately Invoked Function Expression)
+- An IIFE is a javascript function that run as soon as is defined.
+- ✅ Notice the parentheses () at the end—this immediately invokes the function.
+Syntax
+```
+(function() {
+    console.log("I am an IIFE!");
+})(); 
 
+```
+### UseCase
+-  Avoid Global Scope 
+-  Execute Code Immediately	
+-  Create Private Variables	
+-  Prevent Function Name Conflicts	
+-  Async IIFE	
+-  Pass Arguments	Allows 
+-  Minification & Optimization:	Helps in reducing file size and improving performance.
+  
+ ---
 
-# Promises
+# JavaScript Asynchronus
+## Promises
 - In JavaScript, a Promise is an object that represents the eventual completion or failure of an asynchronous operation and its resulting value.
 - A Promise can be in one of three states:
 -- Pending: The initial state, indicating that the operation is still ongoing.
@@ -1775,6 +1795,64 @@ So the key difference is the lifetime of the data:
 
 - localStorage persists until removed manually.
 - sessionStorage is cleared when the session ends (i.e., when the browser/tab is closed).
+
+## What is Rest API:
+- Rest API is a way of accessing web services in a simple and flexible way without having any processing. It's used to fetch or give some information from web services. All communication done via REST API uses only http request.
+- Example: Client Server Modal
+
+#### HTTP Request:
+- GET
+- POST
+- PUT
+- DELETE
+- PATCH
+
+### Falsy Value in js:
+- undefined, null, NAN, 0, "", false.
+
+### 📌 What is TDZ (Temporal Dead Zone)?
+- Temporal Dead Zone (TDZ) is the time between when a let or const variable is hoisted and when it is initialized in JavaScript.
+- During this time, accessing the variable results in a ReferenceError.
+- It exists only for let and const, NOT for var.
+```
+console.log(x); // ❌ ReferenceError: Cannot access 'x' before initialization
+let x = 10;
+console.log(x); // ✅ 10
+```
+### 📌 Pass by Value & Pass by Reference – What's the Difference?
+- In JavaScript, how a variable is passed to a function depends on its data type:
+- Primitive types (string, number, boolean, null, undefined, symbol, bigint) → Pass by Value
+- Non-primitive types (object, array, function) → Pass by Reference
+
+- Pass by Value:
+- original array effected:  ❌ No
+```
+let a = 10;
+function changeValue(num) {
+    num = 20; // Changing the copy, not the original
+}
+changeValue(a);
+console.log(a); // 10 (Unchanged)
+
+```
+-  Pass by Reference (Mutable Data Types)
+-  original array effected:  ✅ Yes
+```
+let obj = { value: 10 };
+function modify(objRef) {
+    objRef.value = 20; // Modifying the original object
+}
+modify(obj);
+console.log(obj.value); // 20 (Changed)
+```
+## 🍪 Cookies in JavaScript 🍪
+- A cookie is a small piece of data stored in the user's browser to track user sessions, preferences, or authentication details.
+#### 🔹 Key Features of Cookies:
+- Stored as key-value pairs in the browser.
+- Can have an expiration time.
+- Sent with every HTTP request to the server.
+- Used for session management, authentication, and tracking.
+
 
 
 
