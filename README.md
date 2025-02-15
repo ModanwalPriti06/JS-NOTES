@@ -1,9 +1,6 @@
 # JavaScript-Notes
 Basic Javascript notes for beginners
 
-
-# Pipe and debouncing and generator
-
 ## How to Start
 1. Create new repo and add README file.
 2. click on code button code > codespace > click
@@ -15,6 +12,7 @@ Basic Javascript notes for beginners
 
 ## String Interpolation: 
 The ability to substitute part of the string for the values of variables or expressions. This feature is also called string interpolation.
+
 ## HTML escaping:
 The ability to transform a string so that it is safe to include in HTML.
 ## JavaScript Computed Property
