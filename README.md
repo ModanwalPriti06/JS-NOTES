@@ -1412,9 +1412,10 @@ Black box: In JavaScript, the term "black box" can refer to different concepts d
 
 ## Closure:
 
-A closure is the combination of a function bundled together (enclosed) where innerfunction can access outer scope function and variable.
-In other words, a closure gives a function access to its outer scope. 
-innerfunction able to access outside variable and function.
+- A closure is the combination of a function bundled together (enclosed) where innerfunction can access outer scope function and variable.
+- In other words, a closure gives a function access to its outer scope. 
+- innerfunction able to access outside variable and function.
+- A function bind with lexical environment (function along with local scope).
 ```
 function print(variable) {
   let c = 3;
@@ -1695,6 +1696,7 @@ new Promise((resolve, reject)=> resolve(obj)).then(msg=>console.log(msg);
 - The event loop in JavaScript is a mechanism that handles asynchronous operations. JavaScript is single-threaded, meaning it executes code sequentially in a single call stack.
 
 ### How it works:
+Check up whatsapp image - uploaded
 - Call Stack: JavaScript executes synchronous code line by line, pushing and popping function calls from the stack.
 - Web APIs: Asynchronous tasks like setTimeout, fetch, or event listeners are handled by Web APIs.
 - Callback Queue & Microtask Queue: Once asynchronous tasks are completed, their callbacks are placed in the queue.
@@ -1896,8 +1898,48 @@ console.log(obj.value); // 20 (Changed)
 - Sent with every HTTP request to the server.
 - Used for session management, authentication, and tracking.
 
-
-
+## Function
+1. function statement: A Function Statement (also known as a Function Declaration)
+```
+   function functionName(parameters) {
+    // Function body
+  }
+```
+2. Function Expression: A Function Expression is when a function is assigned to a variable.
+```
+const functionName = function(parameters) {
+    // Function body
+};
+```
+3. Anonymous Function: An anonymous function is a function without a name.
+ ```
+   const variableName = function(parameters) {
+    // Function body
+};
+ ```
+4. Named function: A named function is a function that has a name when it is declared.
+```
+function functionName(parameters) {
+    // Function body
+}
+```
+5. Anonymous Function Expression: Anonymous Function Expression is a function without a name that is assigned to a variable
+```
+const variableName = function(parameters) {
+    // Function body
+};
+```
+6. What are First-Class Functions?
+- In JavaScript, functions are treated as first-class citizens, meaning:
+- ✅ Functions can be assigned to variables
+- ✅ Functions can be passed as arguments to other functions
+- ✅ Functions can be returned from other functions
+```
+const greet = function(name) {
+    return "Hello, " + name;
+};
+console.log(greet("Alice")); // ✅ "Hello, Alice"
+```
 
 
 
