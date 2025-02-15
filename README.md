@@ -1529,6 +1529,51 @@ Syntax
 -  Async IIFE	
 -  Pass Arguments	Allows 
 -  Minification & Optimization:	Helps in reducing file size and improving performance.
+
+### Array of();
+- Array.of() is a built-in JavaScript method that creates a new array from the given arguments.
+- If you have multiple single value you want to convert and put in single array.
+```
+console.log(Array.of(1, 2, 3));  // ✅ [1, 2, 3]
+console.log(Array.of("a", "b", "c"));  // ✅ ["a", "b", "c"]
+console.log(Array.of());  // ✅ [] (Empty array)
+```
+### Object.freeze() 
+- Object.freeze() makes an object immutable, meaning:
+- ❌ No new properties can be added
+- ❌ Existing properties cannot be removed
+- ❌ Existing properties cannot be changed
+- ❌ Prototype cannot be modified
+
+### 📌 What is a Singleton?
+- A singleton is a design pattern that ensures only one instance of an object exists throughout the program.
+- In JavaScript, an object singleton is simply an object that is created only once and reused whenever needed.
+
+### flat() function
+- The flat() method flattens nested arrays into a single array up to a given depth.
+- It removes nested arrays and merges their elements into the parent array.
+```
+const arr = [1, 2, [3, 4, [5, 6]]];
+console.log(arr.flat()); 
+// [1, 2, 3, 4, [5, 6]] (Flattens only one level)
+
+or
+const arr = [1, 2, [3, 4, [5, 6, [7, 8]]]];
+console.log(arr.flat(2)); 
+// [1, 2, 3, 4, 5, 6, [7, 8]] (Flattens 2 levels)
+
+or
+console.log(arr.flat(infinity)); 
+// [1, 2, 3, 4, 5, 6, 7, 8] (Flattens 2 levels)
+```
+### round, ceil, floor, min, max 
+- Math.round(3.4) = 4,  Math.round(9.7) = 10,
+-  Math.ceil(3.4) = 4,  Math.ceil(4.1) = 5
+-  Math.floor(4.2) = 4
+-  (Math.random()*10) + 1 
+
+
+
   
  ---
 
