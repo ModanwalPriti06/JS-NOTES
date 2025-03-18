@@ -1695,6 +1695,7 @@ new Promise((resolve, reject)=> resolve(obj)).then(msg=>console.log(msg);
 ## Event loop and Delegation
 - The event loop in JavaScript is a mechanism that handles asynchronous operations. JavaScript is single-threaded, meaning it executes code sequentially in a single call stack.
 - Everything in Javascript happened in execution context.
+  
 ##### execution context
 - A big box which divide in 2 category
 1. Memory Component ( Variable environment) = all variable and function are store in key value pair.
@@ -1702,7 +1703,8 @@ new Promise((resolve, reject)=> resolve(obj)).then(msg=>console.log(msg);
 
 ### How it works:
 Check up whatsapp image - uploaded
-- Call Stack: JavaScript executes synchronous code line by line, pushing and popping function calls from the stack.
+- Call Stack: JavaScript executes synchronous code line by line, pushing and popping function calls from the stack. Every time bottom of the stack have Execution context, means whenever js program is run this callstack populate this global execution context (GEC).
+- Call stack maintain the order of execution of execution context.
 - Web APIs: Asynchronous tasks like setTimeout, fetch, or event listeners are handled by Web APIs.
 - Callback Queue & Microtask Queue: Once asynchronous tasks are completed, their callbacks are placed in the queue.
 - - Microtasks (Promises, process.nextTick in Node.js) are prioritized over macrotasks (setTimeout, setInterval).
