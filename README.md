@@ -1692,8 +1692,13 @@ doStuff();
 new Promise((resolve, reject)=> resolve(obj)).then(msg=>console.log(msg);
 ```
 
-## Event Loop and Delegation
+## Event loop and Delegation
 - The event loop in JavaScript is a mechanism that handles asynchronous operations. JavaScript is single-threaded, meaning it executes code sequentially in a single call stack.
+- Everything in Javascript happened in execution context.
+##### execution context
+- A big box which divide in 2 category
+1. Memory Component ( Variable environment) = all variable and function are store in key value pair.
+2. Code Component (Thread of Execution) = Just like whole code executed in thread run **one line at the time** (means one time can run one line only) that's why js is synchronous single threaded code component. 
 
 ### How it works:
 Check up whatsapp image - uploaded
