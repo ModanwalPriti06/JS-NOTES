@@ -1439,7 +1439,22 @@ function call(){
   }
   console.log('Nameste Javascript')
 }
-call();    // output will be 5 5 5 5 5 because of isuing var if use let then will be work fine
+call();    // output will be 5 5 5 5 5 because of isuing var if use let then will be work fine but if you don't want to solve with let then use closure, closure can help you
+```
+- clousre help example without let
+```
+function call(){
+  for(var i =0; i<5;i++){
+    function close(i){
+      setTimeout(function() {
+        console.log(i)
+      }, i*1000);
+    }
+    close(i);
+  }
+  console.log('Nameste Javascript')
+}
+call();
 ```
 
 ### NaN: Nan is not equal to anything
