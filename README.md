@@ -1948,10 +1948,18 @@ const greet = function(name) {
 console.log(greet("Alice")); // ✅ "Hello, Alice"
 ```
 
+## Lexical ENvironment
+- A lexical environment is the local memory along with lexical environment of this parent
+- Lexical environment = Lexical Scope + ref of lexical environment of parent.
 
+  ## TDZ (Temporal dead zone)
+  ```
+  console.log(a);
 
-
-
+  let a = 10;
+  ```
+  - here from line no 1 to 3 before initializing the time space is called TDZ.
+  
 
 
 
