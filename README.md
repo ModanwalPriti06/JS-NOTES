@@ -1,5 +1,6 @@
 # JavaScript-Notes
 Basic Javascript notes for beginners
+- callback queue can called task queue also
 
 ## How to Start
 1. Create new repo and add README file.
