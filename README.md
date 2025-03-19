@@ -1429,6 +1429,19 @@ function print(variable) {
 let a = print(1);
 a(2);
 ```
+- Here one namste js video example for closure 
+```
+function call(){
+  for(var i =0; i<5;i++){
+    setTimeout(function() {
+      console.log(i)
+    }, i*1000);
+  }
+  console.log('Nameste Javascript')
+}
+call();    // output will be 5 5 5 5 5 because of isuing var if use let then will be work fine
+```
+
 ### NaN: Nan is not equal to anything
 ### Async and Defer
 ![Uploading Screenshot 2025-01-18 at 6.14.15 PM.png…]()
