@@ -1724,7 +1724,24 @@ new Promise((resolve, reject)=> resolve(obj)).then(msg=>console.log(msg);
 ## Event loop and Delegation
 - The event loop in JavaScript is a mechanism that handles asynchronous operations. JavaScript is single-threaded, meaning it executes code sequentially in a single call stack.
 - Everything in Javascript happened in execution context.
-  
+```
+console.log("Start");
+setTimeout(() => console.log("setTimeout"), 0);
+setImmediate(() => console.log("setImmediate"));
+process.nextTick(() => console.log("nextTick"));
+console.log("End");   
+```
+output:
+```
+Start
+nextTick
+setImmediate
+setTimeout
+End
+```
+### process.nextTick() in Node.js
+- process.nextTick() is a Node.js method that schedules a callback function to be executed immediately after the current operation completes, before the Event Loop continues to the next phase.
+
 ##### execution context
 - A big box which divide in 2 category
 1. Memory Component ( Variable environment) = all variable and function are store in key value pair.
