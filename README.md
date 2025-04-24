@@ -1798,8 +1798,8 @@ This approach has several advantages:
 ## What is the difference between synchronous and asynchronous JavaScript?
 - Synchronous operations run line by line, blocking the execution of any subsequent code until the current task is completed. So, each operation waits for the previous one to finish before starting.
 - Asynchronous operations allow code to run non-blocking, meaning the execution can continue with other tasks without waiting for the current task to finish. When the task is completed, it typically triggers a callback, promise, or event to handle the result.
- 
-## Can you explain the difference between setTimeout() and setInterval() in JavaScript?
+
+## setTimeout() and setInterval() in JavaScript?
 - setTimeout(): This is used to execute a function once after a specified delay (in milliseconds). After the delay, the function is invoked and it does not repeat.
 - setInterval(): This is used to execute a function repeatedly at a specified interval (in milliseconds). It keeps calling the function after each interval until you clear it using clearInterval().
 
