@@ -1610,6 +1610,7 @@ console.log(arr.flat(infinity));
 # JavaScript Asynchronus
 ## Promises
 - In JavaScript, a Promise is an object that represents the eventual completion or failure of an asynchronous operation and its resulting value.
+- A promise is a JavaScript object that is used to handle all the asynchronous data operations. While developing an application, you may encounter that you are using a lot of nested callback functions, which causes a problem of callback hell. Promises solve this problem of callback hell.
 - A Promise can be in one of three states:
 -- Pending: The initial state, indicating that the operation is still ongoing.
 -- Fulfilled: The operation completed successfully, and a resulting value is available.
