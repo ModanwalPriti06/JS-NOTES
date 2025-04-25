@@ -1897,6 +1897,7 @@ So the key difference is the lifetime of the data:
 
 ## What is Rest API:
 - Rest API is a way of accessing web services in a simple and flexible way without having any processing. It's used to fetch or give some information from web services. All communication done via REST API uses only http request.
+- A RESTful API is an architectural style for constructing web APIs. A key characteristic of a RESTful API is its statelessness, signifying that each request carries all the essential information for its completion.
 - Example: Client Server Modal
 
 #### HTTP Request:
