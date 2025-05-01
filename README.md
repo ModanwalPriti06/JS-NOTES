@@ -103,7 +103,16 @@ console.log(result);
 
 ## Array extensions
 - Array.of() – improve array creation.
+```
+const arr = Array.of(5);  
+console.log(arr); // [5] — Not [undefined, undefined, undefined, undefined, undefined]
+```
 - Array.from() – create arrays from array-like or iterable objects.
+```
+const str = "hello";
+const arr = Array.from(str);
+console.log(arr); // ['h', 'e', 'l', 'l', 'o']
+```
 - Array find() – find an element in an array
 - Array findIndex() – find the index of an element in an array.
 
