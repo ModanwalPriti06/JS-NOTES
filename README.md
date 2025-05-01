@@ -1744,10 +1744,10 @@ console.log("End");
 output:
 ```
 Start
+End
 nextTick
 setImmediate
 setTimeout
-End
 ```
 ### process.nextTick() in Node.js
 - process.nextTick() is a Node.js method that schedules a callback function to be executed immediately after the current operation completes, before the Event Loop continues to the next phase.
