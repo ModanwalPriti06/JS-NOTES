@@ -1491,6 +1491,23 @@ setTimeout(()=>{
    },100)
 },100)
 ```
+```
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+// Main async function
+async function runSequence() {
+  await delay(100);
+  console.log('inside');
+
+  await delay(100);
+  console.log('inside 1');
+
+  await delay(100);
+  console.log('inside 2');
+}
+runSequence();
+```
 # Splice and Slice
 ## Splice :
 - The splice() method change the original array
