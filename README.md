@@ -1136,6 +1136,10 @@ console.log(person.birthYear)
 ```
 ## Bind , Call and Apply
 
+```
+
+```
+
 ### 1. Bind
 - Bind: In JavaScript, bind() is a method used to create a new function where the value of ```this``` is explicitly set to a specific object, and optionally, you can predefine some arguments for that function.
 ```
@@ -1320,6 +1324,8 @@ function doubleAndAddOne(ele){
 const res = array.map(doubleAndAddOne)
 console.log(res);
 ```
+<img width="887" alt="Screenshot 2025-05-17 at 7 06 17 PM" src="https://github.com/user-attachments/assets/0fa7ce83-95a0-49a8-81f5-1b95704ed8ac" />
+
 ## Currying
 Currying is a functional programming technique where a function with multiple arguments is transformed into a sequence of functions, each taking a single argument. Instead of providing all arguments at once, the function can be called incrementally, with each invocation returning a new function that accepts the next argument, until all arguments are provided and the final result is computed.
 
@@ -1478,6 +1484,8 @@ call();
  You ask someone to do a task for you, and when they finish, they call you to tell you it’s done. That "call" they make is the callback.
 - Simply just think a callback function a function which one you want to run after some criteria and based on requirement;
 - example: settimeout one parameter is callback function which want to run after 2 parameter duration, same if we click button want to run async funstion in js on click event listner.
+
+<img width="785" alt="Screenshot 2025-05-17 at 6 50 48 PM" src="https://github.com/user-attachments/assets/a791f46f-011e-43c5-b5c3-7afa337b2237" />
 
 ## Callback hell: inside callback funstion call another callback function
 example: inside setTimeout we are calling another callback setInterval and so on.
