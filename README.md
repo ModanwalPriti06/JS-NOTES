@@ -232,6 +232,7 @@ console.log(teacher.greet());
 ```
 ## this keyword
 In JavaScript, you can use the this keyword in the global and function contexts. Moreover, the behavior of the  this keyword changes between strict and non-strict modes.
+- this keyword refer global obj module.export it is not refer same obj where arraow function called but normal function refer same obj where function is called.
 
 ### Global context
 In the global context, the this references the global object, which is the window object on the web browser or global object on Node.js.
