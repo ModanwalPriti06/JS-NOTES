@@ -1632,7 +1632,7 @@ console.log(arr.flat(infinity));
 // [1, 2, 3, 4, 5, 6, 7, 8] (Flattens 2 levels)
 ```
 ### round, ceil, floor, min, max 
-- Math.round(3.4) = 4,  Math.round(9.7) = 10,
+- Math.round(3.4) = 3,  Math.round(9.7) = 10,
 -  Math.ceil(3.4) = 4,  Math.ceil(4.1) = 5
 -  Math.floor(4.2) = 4
 -  (Math.random()*10) + 1 
