@@ -2046,6 +2046,15 @@ console.log(greet("Alice")); // ✅ "Hello, Alice"
   
 
 
+## Promises.all / async await mapped data
+
+![1](https://github.com/user-attachments/assets/9ca858b9-90a7-4e13-8c38-0305b4a69c3f)
+promises
+
+![12](https://github.com/user-attachments/assets/7d5e38f6-85cc-4478-bec5-dc6f3cab1516)
+
+async await
+![3](https://github.com/user-attachments/assets/7c7825fb-0021-4a50-9779-86bc109a77d0)
 
 
 
