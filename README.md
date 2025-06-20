@@ -1485,8 +1485,6 @@ call();
 - Simply just think a callback function a function which one you want to run after some criteria and based on requirement;
 - example: settimeout one parameter is callback function which want to run after 2 parameter duration, same if we click button want to run async funstion in js on click event listner.
 
-<img width="785" alt="Screenshot 2025-05-17 at 6 50 48 PM" src="https://github.com/user-attachments/assets/a791f46f-011e-43c5-b5c3-7afa337b2237" />
-
 ## Callback hell: inside callback funstion call another callback function
 example: inside setTimeout we are calling another callback setInterval and so on.
 ```
