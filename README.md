@@ -1325,7 +1325,6 @@ function doubleAndAddOne(ele){
 const res = array.map(doubleAndAddOne)
 console.log(res);
 ```
-<img width="887" alt="Screenshot 2025-05-17 at 7 06 17 PM" src="https://github.com/user-attachments/assets/0fa7ce83-95a0-49a8-81f5-1b95704ed8ac" />
 
 ## Currying
 Currying is a functional programming technique where a function with multiple arguments is transformed into a sequence of functions, each taking a single argument. Instead of providing all arguments at once, the function can be called incrementally, with each invocation returning a new function that accepts the next argument, until all arguments are provided and the final result is computed.
