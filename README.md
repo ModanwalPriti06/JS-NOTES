@@ -2054,6 +2054,16 @@ async await
 ![3](https://github.com/user-attachments/assets/7c7825fb-0021-4a50-9779-86bc109a77d0)
 
 
+| Feature              | `var`                                  | `let`                           | `const`                            |
+| -------------------- | -------------------------------------- | ------------------------------- | ---------------------------------- |
+| **Scope**            | Function-scoped                        | Block-scoped `{}`               | Block-scoped `{}`                  |
+| **Hoisting**         | ✅ Hoisted (initialized as `undefined`) | ✅ Hoisted (but not initialized) | ✅ Hoisted (but not initialized)    |
+| **Redeclaration**    | ✅ Allowed                              | ❌ Not allowed in same scope     | ❌ Not allowed                      |
+| **Reassignment**     | ✅ Allowed                              | ✅ Allowed                       | ❌ Not allowed                      |
+| **Must Initialize?** | ❌ No                                   | ❌ No                            | ✅ Yes                              |
+| **Use in Loops**     | Can lead to unexpected behavior        | Safe (block-scoped)             | Safe, but can’t be reassigned      |
+| **Global Binding**   | Adds to `window` object (in browsers)  | ❌ No                            | ❌ No                               |
+| **Typical Use Case** | Older code, function-level vars        | Variables that will change      | Constants (fixed reference values) |
 
 
 
