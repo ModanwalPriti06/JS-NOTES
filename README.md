@@ -1225,7 +1225,7 @@ Try it out
 Functional programming (FP) in JavaScript is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing state or mutable data. It's centered around pure functions, immutability, and the use of higher-order functions to build more predictable, testable, and modular code.
 
 ### Pure function
-###### Characteristics of Pure Functions:
+**Characteristics of Pure Functions:**
 1. Output depends only on input: The function's behavior is entirely predictable based on its inputs.
 2. No modification of external state: The function does not change variables, data, or state outside its own scope.
 ```
