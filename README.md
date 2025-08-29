@@ -590,11 +590,11 @@ for (let i = 0; i < arr.length; i++) {
 }
 console.log(arr)
 ```
-## Notes: Quick Understand of Quick Sort
-Step 1: Choose a Pivot
-Step 2: Partition the Array
-Step 3: Recursively Apply Quick Sort
-Step 4: Base Case
+> [!Notes] Quick Understand of Quick Sort
+> Step 1: Choose a Pivot
+> Step 2: Partition the Array
+> Step 3: Recursively Apply Quick Sort
+> Step 4: Base Case
 
 1. Quick Sort Function
     Base Case
