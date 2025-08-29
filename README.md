@@ -590,7 +590,7 @@ for (let i = 0; i < arr.length; i++) {
 }
 console.log(arr)
 ```
-> [!Notes] Quick Understand of Quick Sort
+> [!Note] Quick Understand of Quick Sort
 > Step 1: Choose a Pivot
 > Step 2: Partition the Array
 > Step 3: Recursively Apply Quick Sort
