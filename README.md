@@ -1172,7 +1172,20 @@ console.log(res)
 ```
 ### 2. call():
 - It immediately invokes the function, passing the this value as the first argument and the function's arguments after that. The arguments are passed one by one (not as an array).
+```
+let person = {
+  name: "Priti"
+};
 
+function printName(age) {
+  console.log(this.name + " is " + age + " years old");
+}
+
+printName.call(person, 22); 
+```
+- thisArg = person → so inside printName, this.name = "Priti".
+- 22 is passed as the age argument.
+  
 ### Apply: 
 - The difference between call and apply in call, they have to pass parameter normally and in apply we send parameter in array.
 - It immediately invokes the function, similar to call(), but the arguments are passed as an array or an array-like object.
