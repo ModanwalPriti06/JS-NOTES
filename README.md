@@ -1137,10 +1137,6 @@ console.log(person.birthYear)
 ```
 ## Bind , Call and Apply
 
-```
-
-```
-
 ### 1. Bind
 - Bind: In JavaScript, bind() is a method used to create a new function where the value of ```this``` is explicitly set to a specific object, and optionally, you can predefine some arguments for that function.
 ```
